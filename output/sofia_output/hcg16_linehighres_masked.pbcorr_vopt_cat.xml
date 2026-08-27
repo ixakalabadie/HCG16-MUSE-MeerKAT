@@ -1,0 +1,1782 @@
+<?xml version="1.0" ?>
+<VOTABLE version="1.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.ivoa.net/xml/VOTable/v1.3">
+	<RESOURCE>
+		<DESCRIPTION>Source catalogue created by the Source Finding Application (SoFiA 2.6.0)</DESCRIPTION>
+		<PARAM name="Time" datatype="char" arraysize="*" value="Wed, 26 Aug 2026, 16:23:58" ucd="time.creation"/>
+		<PARAM name="Creator" datatype="char" arraysize="*" value="SoFiA 2.6.0 (29-Oct-2024)" ucd="meta.id;meta.software"/>
+		<PARAM name="pipeline.verbose" datatype="char" arraysize="*" value="false" ucd="meta.note"/>
+		<PARAM name="pipeline.pedantic" datatype="char" arraysize="*" value="true" ucd="meta.note"/>
+		<PARAM name="pipeline.threads" datatype="char" arraysize="*" value="0" ucd="meta.note"/>
+		<PARAM name="input.data" datatype="char" arraysize="*" value="../output/hcg16_linehighres_masked.pbcorr_vopt.fits" ucd="meta.note"/>
+		<PARAM name="input.region" datatype="char" arraysize="*" value="" ucd="meta.note"/>
+		<PARAM name="input.gain" datatype="char" arraysize="*" value="" ucd="meta.note"/>
+		<PARAM name="input.noise" datatype="char" arraysize="*" value="" ucd="meta.note"/>
+		<PARAM name="input.weights" datatype="char" arraysize="*" value="../output/hcg16_linehighres_masked.pb_vopt_squared.fits" ucd="meta.note"/>
+		<PARAM name="input.primaryBeam" datatype="char" arraysize="*" value="" ucd="meta.note"/>
+		<PARAM name="input.mask" datatype="char" arraysize="*" value="" ucd="meta.note"/>
+		<PARAM name="input.invert" datatype="char" arraysize="*" value="false" ucd="meta.note"/>
+		<PARAM name="flag.region" datatype="char" arraysize="*" value="" ucd="meta.note"/>
+		<PARAM name="flag.cube" datatype="char" arraysize="*" value="" ucd="meta.note"/>
+		<PARAM name="flag.catalog" datatype="char" arraysize="*" value="" ucd="meta.note"/>
+		<PARAM name="flag.radius" datatype="char" arraysize="*" value="5" ucd="meta.note"/>
+		<PARAM name="flag.auto" datatype="char" arraysize="*" value="false" ucd="meta.note"/>
+		<PARAM name="flag.threshold" datatype="char" arraysize="*" value="5.0" ucd="meta.note"/>
+		<PARAM name="flag.log" datatype="char" arraysize="*" value="false" ucd="meta.note"/>
+		<PARAM name="contsub.enable" datatype="char" arraysize="*" value="false" ucd="meta.note"/>
+		<PARAM name="contsub.order" datatype="char" arraysize="*" value="0" ucd="meta.note"/>
+		<PARAM name="contsub.threshold" datatype="char" arraysize="*" value="2.0" ucd="meta.note"/>
+		<PARAM name="contsub.shift" datatype="char" arraysize="*" value="4" ucd="meta.note"/>
+		<PARAM name="contsub.padding" datatype="char" arraysize="*" value="3" ucd="meta.note"/>
+		<PARAM name="scaleNoise.enable" datatype="char" arraysize="*" value="true" ucd="meta.note"/>
+		<PARAM name="scaleNoise.mode" datatype="char" arraysize="*" value="local" ucd="meta.note"/>
+		<PARAM name="scaleNoise.statistic" datatype="char" arraysize="*" value="mad" ucd="meta.note"/>
+		<PARAM name="scaleNoise.fluxRange" datatype="char" arraysize="*" value="negative" ucd="meta.note"/>
+		<PARAM name="scaleNoise.windowXY" datatype="char" arraysize="*" value="25" ucd="meta.note"/>
+		<PARAM name="scaleNoise.windowZ" datatype="char" arraysize="*" value="1" ucd="meta.note"/>
+		<PARAM name="scaleNoise.gridXY" datatype="char" arraysize="*" value="5" ucd="meta.note"/>
+		<PARAM name="scaleNoise.gridZ" datatype="char" arraysize="*" value="0" ucd="meta.note"/>
+		<PARAM name="scaleNoise.interpolate" datatype="char" arraysize="*" value="true" ucd="meta.note"/>
+		<PARAM name="scaleNoise.scfind" datatype="char" arraysize="*" value="false" ucd="meta.note"/>
+		<PARAM name="rippleFilter.enable" datatype="char" arraysize="*" value="false" ucd="meta.note"/>
+		<PARAM name="rippleFilter.statistic" datatype="char" arraysize="*" value="median" ucd="meta.note"/>
+		<PARAM name="rippleFilter.windowXY" datatype="char" arraysize="*" value="31" ucd="meta.note"/>
+		<PARAM name="rippleFilter.windowZ" datatype="char" arraysize="*" value="15" ucd="meta.note"/>
+		<PARAM name="rippleFilter.gridXY" datatype="char" arraysize="*" value="0" ucd="meta.note"/>
+		<PARAM name="rippleFilter.gridZ" datatype="char" arraysize="*" value="0" ucd="meta.note"/>
+		<PARAM name="rippleFilter.interpolate" datatype="char" arraysize="*" value="false" ucd="meta.note"/>
+		<PARAM name="scfind.enable" datatype="char" arraysize="*" value="true" ucd="meta.note"/>
+		<PARAM name="scfind.kernelsXY" datatype="char" arraysize="*" value="0, 3" ucd="meta.note"/>
+		<PARAM name="scfind.kernelsZ" datatype="char" arraysize="*" value="0, 3, 7" ucd="meta.note"/>
+		<PARAM name="scfind.threshold" datatype="char" arraysize="*" value="5.6" ucd="meta.note"/>
+		<PARAM name="scfind.replacement" datatype="char" arraysize="*" value="2.0" ucd="meta.note"/>
+		<PARAM name="scfind.statistic" datatype="char" arraysize="*" value="mad" ucd="meta.note"/>
+		<PARAM name="scfind.fluxRange" datatype="char" arraysize="*" value="negative" ucd="meta.note"/>
+		<PARAM name="threshold.enable" datatype="char" arraysize="*" value="false" ucd="meta.note"/>
+		<PARAM name="threshold.threshold" datatype="char" arraysize="*" value="5.0" ucd="meta.note"/>
+		<PARAM name="threshold.mode" datatype="char" arraysize="*" value="relative" ucd="meta.note"/>
+		<PARAM name="threshold.statistic" datatype="char" arraysize="*" value="mad" ucd="meta.note"/>
+		<PARAM name="threshold.fluxRange" datatype="char" arraysize="*" value="negative" ucd="meta.note"/>
+		<PARAM name="linker.enable" datatype="char" arraysize="*" value="true" ucd="meta.note"/>
+		<PARAM name="linker.radiusXY" datatype="char" arraysize="*" value="2" ucd="meta.note"/>
+		<PARAM name="linker.radiusZ" datatype="char" arraysize="*" value="3" ucd="meta.note"/>
+		<PARAM name="linker.minSizeXY" datatype="char" arraysize="*" value="5" ucd="meta.note"/>
+		<PARAM name="linker.minSizeZ" datatype="char" arraysize="*" value="5" ucd="meta.note"/>
+		<PARAM name="linker.maxSizeXY" datatype="char" arraysize="*" value="0" ucd="meta.note"/>
+		<PARAM name="linker.maxSizeZ" datatype="char" arraysize="*" value="0" ucd="meta.note"/>
+		<PARAM name="linker.minPixels" datatype="char" arraysize="*" value="0" ucd="meta.note"/>
+		<PARAM name="linker.maxPixels" datatype="char" arraysize="*" value="0" ucd="meta.note"/>
+		<PARAM name="linker.minFill" datatype="char" arraysize="*" value="0.0" ucd="meta.note"/>
+		<PARAM name="linker.maxFill" datatype="char" arraysize="*" value="0.0" ucd="meta.note"/>
+		<PARAM name="linker.positivity" datatype="char" arraysize="*" value="false" ucd="meta.note"/>
+		<PARAM name="linker.keepNegative" datatype="char" arraysize="*" value="false" ucd="meta.note"/>
+		<PARAM name="reliability.enable" datatype="char" arraysize="*" value="false" ucd="meta.note"/>
+		<PARAM name="reliability.parameters" datatype="char" arraysize="*" value="peak, sum, mean" ucd="meta.note"/>
+		<PARAM name="reliability.threshold" datatype="char" arraysize="*" value="0.9" ucd="meta.note"/>
+		<PARAM name="reliability.scaleKernel" datatype="char" arraysize="*" value="0.4" ucd="meta.note"/>
+		<PARAM name="reliability.minSNR" datatype="char" arraysize="*" value="3.0" ucd="meta.note"/>
+		<PARAM name="reliability.minPixels" datatype="char" arraysize="*" value="0" ucd="meta.note"/>
+		<PARAM name="reliability.autoKernel" datatype="char" arraysize="*" value="true" ucd="meta.note"/>
+		<PARAM name="reliability.iterations" datatype="char" arraysize="*" value="30" ucd="meta.note"/>
+		<PARAM name="reliability.tolerance" datatype="char" arraysize="*" value="0.05" ucd="meta.note"/>
+		<PARAM name="reliability.catalog" datatype="char" arraysize="*" value="" ucd="meta.note"/>
+		<PARAM name="reliability.plot" datatype="char" arraysize="*" value="true" ucd="meta.note"/>
+		<PARAM name="reliability.plotExtra" datatype="char" arraysize="*" value="false" ucd="meta.note"/>
+		<PARAM name="reliability.debug" datatype="char" arraysize="*" value="false" ucd="meta.note"/>
+		<PARAM name="dilation.enable" datatype="char" arraysize="*" value="false" ucd="meta.note"/>
+		<PARAM name="dilation.iterationsXY" datatype="char" arraysize="*" value="10" ucd="meta.note"/>
+		<PARAM name="dilation.iterationsZ" datatype="char" arraysize="*" value="5" ucd="meta.note"/>
+		<PARAM name="dilation.threshold" datatype="char" arraysize="*" value="0.001" ucd="meta.note"/>
+		<PARAM name="parameter.enable" datatype="char" arraysize="*" value="true" ucd="meta.note"/>
+		<PARAM name="parameter.wcs" datatype="char" arraysize="*" value="true" ucd="meta.note"/>
+		<PARAM name="parameter.physical" datatype="char" arraysize="*" value="false" ucd="meta.note"/>
+		<PARAM name="parameter.prefix" datatype="char" arraysize="*" value="SoFiA" ucd="meta.note"/>
+		<PARAM name="parameter.offset" datatype="char" arraysize="*" value="false" ucd="meta.note"/>
+		<PARAM name="output.directory" datatype="char" arraysize="*" value="../output/sofia_output" ucd="meta.note"/>
+		<PARAM name="output.filename" datatype="char" arraysize="*" value="hcg16_linehighres_masked.pbcorr_vopt.fits" ucd="meta.note"/>
+		<PARAM name="output.writeCatASCII" datatype="char" arraysize="*" value="true" ucd="meta.note"/>
+		<PARAM name="output.writeCatXML" datatype="char" arraysize="*" value="true" ucd="meta.note"/>
+		<PARAM name="output.writeCatSQL" datatype="char" arraysize="*" value="true" ucd="meta.note"/>
+		<PARAM name="output.writeNoise" datatype="char" arraysize="*" value="true" ucd="meta.note"/>
+		<PARAM name="output.writeFiltered" datatype="char" arraysize="*" value="true" ucd="meta.note"/>
+		<PARAM name="output.writeMask" datatype="char" arraysize="*" value="true" ucd="meta.note"/>
+		<PARAM name="output.writeMask2d" datatype="char" arraysize="*" value="true" ucd="meta.note"/>
+		<PARAM name="output.writeRawMask" datatype="char" arraysize="*" value="true" ucd="meta.note"/>
+		<PARAM name="output.writeMoments" datatype="char" arraysize="*" value="true" ucd="meta.note"/>
+		<PARAM name="output.writeCubelets" datatype="char" arraysize="*" value="true" ucd="meta.note"/>
+		<PARAM name="output.writePV" datatype="char" arraysize="*" value="true" ucd="meta.note"/>
+		<PARAM name="output.writeKarma" datatype="char" arraysize="*" value="true" ucd="meta.note"/>
+		<PARAM name="output.marginCubelets" datatype="char" arraysize="*" value="10" ucd="meta.note"/>
+		<PARAM name="output.marginAperSpec" datatype="char" arraysize="*" value="10" ucd="meta.note"/>
+		<PARAM name="output.thresholdMom12" datatype="char" arraysize="*" value="0.0" ucd="meta.note"/>
+		<PARAM name="output.overwrite" datatype="char" arraysize="*" value="true" ucd="meta.note"/>
+		<TABLE ID="SoFiA_source_catalogue" name="SoFiA source catalogue">
+			<FIELD arraysize="32" datatype="char" name="name" unit="" ucd="meta.id"/>
+			<FIELD datatype="long" name="id" unit="" ucd="meta.id"/>
+			<FIELD datatype="double" name="x" unit="pix" ucd="pos.cartesian.x"/>
+			<FIELD datatype="double" name="y" unit="pix" ucd="pos.cartesian.y"/>
+			<FIELD datatype="double" name="z" unit="pix" ucd="pos.cartesian.z"/>
+			<FIELD datatype="long" name="x_min" unit="pix" ucd="pos.cartesian.x;stat.min"/>
+			<FIELD datatype="long" name="x_max" unit="pix" ucd="pos.cartesian.x;stat.max"/>
+			<FIELD datatype="long" name="y_min" unit="pix" ucd="pos.cartesian.y;stat.min"/>
+			<FIELD datatype="long" name="y_max" unit="pix" ucd="pos.cartesian.y;stat.max"/>
+			<FIELD datatype="long" name="z_min" unit="pix" ucd="pos.cartesian.z;stat.min"/>
+			<FIELD datatype="long" name="z_max" unit="pix" ucd="pos.cartesian.z;stat.max"/>
+			<FIELD datatype="long" name="n_pix" unit="" ucd="meta.number;instr.pixel"/>
+			<FIELD datatype="double" name="f_min" unit="Jy/beam" ucd="phot.flux.density;stat.min"/>
+			<FIELD datatype="double" name="f_max" unit="Jy/beam" ucd="phot.flux.density;stat.max"/>
+			<FIELD datatype="double" name="f_sum" unit="Jy/beam" ucd="phot.flux"/>
+			<FIELD datatype="double" name="rel" unit="" ucd="stat.probability"/>
+			<FIELD datatype="long" name="flag" unit="" ucd="meta.code.qual"/>
+			<FIELD datatype="double" name="rms" unit="Jy/beam" ucd="instr.det.noise"/>
+			<FIELD datatype="double" name="w20" unit="pix" ucd="spect.line.width"/>
+			<FIELD datatype="double" name="w50" unit="pix" ucd="spect.line.width"/>
+			<FIELD datatype="double" name="wm50" unit="pix" ucd="spect.line.width"/>
+			<FIELD datatype="double" name="ell_maj" unit="pix" ucd="phys.angSize"/>
+			<FIELD datatype="double" name="ell_min" unit="pix" ucd="phys.angSize"/>
+			<FIELD datatype="double" name="ell_pa" unit="deg" ucd="pos.posAng"/>
+			<FIELD datatype="double" name="ell3s_maj" unit="pix" ucd="phys.angSize"/>
+			<FIELD datatype="double" name="ell3s_min" unit="pix" ucd="phys.angSize"/>
+			<FIELD datatype="double" name="ell3s_pa" unit="deg" ucd="pos.posAng"/>
+			<FIELD datatype="double" name="kin_pa" unit="deg" ucd="pos.posAng"/>
+			<FIELD datatype="double" name="err_x" unit="pix" ucd="stat.error;pos.cartesian.x"/>
+			<FIELD datatype="double" name="err_y" unit="pix" ucd="stat.error;pos.cartesian.y"/>
+			<FIELD datatype="double" name="err_z" unit="pix" ucd="stat.error;pos.cartesian.z"/>
+			<FIELD datatype="double" name="err_f_sum" unit="Jy/beam" ucd="stat.error;phot.flux"/>
+			<FIELD datatype="double" name="snr" unit="" ucd="stat.snr"/>
+			<FIELD datatype="double" name="snr_max" unit="" ucd="stat.snr"/>
+			<FIELD datatype="double" name="ra" unit="deg" ucd="pos.eq.ra"/>
+			<FIELD datatype="double" name="dec" unit="deg" ucd="pos.eq.dec"/>
+			<FIELD datatype="double" name="v_opt" unit="m/s" ucd="spect.dopplerVeloc.opt"/>
+			<FIELD datatype="long" name="x_peak" unit="pix" ucd="pos.cartesian.x"/>
+			<FIELD datatype="long" name="y_peak" unit="pix" ucd="pos.cartesian.y"/>
+			<FIELD datatype="long" name="z_peak" unit="pix" ucd="pos.cartesian.z"/>
+			<FIELD datatype="double" name="ra_peak" unit="deg" ucd="pos.eq.ra"/>
+			<FIELD datatype="double" name="dec_peak" unit="deg" ucd="pos.eq.dec"/>
+			<FIELD datatype="double" name="v_opt_peak" unit="m/s" ucd="spect.dopplerVeloc.opt"/>
+			<DATA>
+				<TABLEDATA>
+					<TR>
+						<TD>SoFiA J020925.76-100713.3</TD>
+						<TD>1</TD>
+						<TD>1.592833657929750e+03</TD>
+						<TD>1.628064033634866e+03</TD>
+						<TD>2.558536840823797e+02</TD>
+						<TD>1585</TD>
+						<TD>1601</TD>
+						<TD>1618</TD>
+						<TD>1637</TD>
+						<TD>249</TD>
+						<TD>262</TD>
+						<TD>1710</TD>
+						<TD>-2.397699427092448e-04</TD>
+						<TD>1.925512915477157e-03</TD>
+						<TD>1.259672617320916e+00</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0</TD>
+						<TD>4.013919333336831e-04</TD>
+						<TD>1.102628493623706e+01</TD>
+						<TD>7.869525056376208e+00</TD>
+						<TD>9.958746959117713e+00</TD>
+						<TD>8.136292832537244e+00</TD>
+						<TD>6.279686664743469e+00</TD>
+						<TD>-2.242468972516420e+00</TD>
+						<TD>8.682601215463174e+00</TD>
+						<TD>6.475021728839854e+00</TD>
+						<TD>5.733578516145627e+00</TD>
+						<TD>1.525804456321524e+00</TD>
+						<TD>4.506832103362509e-02</TD>
+						<TD>5.440571246911757e-02</TD>
+						<TD>4.062653395588747e-02</TD>
+						<TD>1.659841793330171e-02</TD>
+						<TD>1.037174183904726e+01</TD>
+						<TD>1.087202449311634e+01</TD>
+						<TD>3.235731636302214e+01</TD>
+						<TD>-1.012036604265839e+01</TD>
+						<TD>3.547719278633595e+03</TD>
+						<TD>1592</TD>
+						<TD>1628</TD>
+						<TD>255</TD>
+						<TD>3.235759863899153e+01</TD>
+						<TD>-1.012038741398891e+01</TD>
+						<TD>3.552584446966648e+03</TD>
+					</TR>
+					<TR>
+						<TD>SoFiA J020941.02-100958.1</TD>
+						<TD>2</TD>
+						<TD>1.404958468599834e+03</TD>
+						<TD>1.490734565996957e+03</TD>
+						<TD>2.045607813614739e+02</TD>
+						<TD>1328</TD>
+						<TD>1464</TD>
+						<TD>1373</TD>
+						<TD>1572</TD>
+						<TD>163</TD>
+						<TD>240</TD>
+						<TD>72788</TD>
+						<TD>-7.224793080240488e-04</TD>
+						<TD>2.453961642459035e-03</TD>
+						<TD>4.485132936259093e+01</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0</TD>
+						<TD>3.106095686872117e-04</TD>
+						<TD>4.887601571470536e+01</TD>
+						<TD>3.428990552574297e+01</TD>
+						<TD>4.305983502927501e+01</TD>
+						<TD>1.210923972599832e+02</TD>
+						<TD>3.035011929410548e+01</TD>
+						<TD>-2.377862904854931e+01</TD>
+						<TD>1.228079510302758e+02</TD>
+						<TD>3.368519762264538e+01</TD>
+						<TD>-2.417279921101066e+01</TD>
+						<TD>3.335222139649648e+02</TD>
+						<TD>4.991703944559561e-02</TD>
+						<TD>9.889134282638939e-02</TD>
+						<TD>2.392280672844473e-02</TD>
+						<TD>8.380013605718153e-02</TD>
+						<TD>7.314612116425080e+01</TD>
+						<TD>7.850638219639508e+01</TD>
+						<TD>3.242093582704216e+01</TD>
+						<TD>-1.016614246350683e+01</TD>
+						<TD>3.840039177298546e+03</TD>
+						<TD>1442</TD>
+						<TD>1558</TD>
+						<TD>202</TD>
+						<TD>3.240839033027355e+01</TD>
+						<TD>-1.014372163721095e+01</TD>
+						<TD>3.854633167445660e+03</TD>
+					</TR>
+					<TR>
+						<TD>SoFiA J020926.96-100718.0</TD>
+						<TD>3</TD>
+						<TD>1.578007563452983e+03</TD>
+						<TD>1.624202474032765e+03</TD>
+						<TD>2.350885603771620e+02</TD>
+						<TD>1574</TD>
+						<TD>1582</TD>
+						<TD>1621</TD>
+						<TD>1627</TD>
+						<TD>233</TD>
+						<TD>237</TD>
+						<TD>145</TD>
+						<TD>-7.843893399694934e-05</TD>
+						<TD>1.201641047373414e-03</TD>
+						<TD>8.942952239704027e-02</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0</TD>
+						<TD>8.610209770318704e-04</TD>
+						<TD>4.000000000000000e+00</TD>
+						<TD>3.129822274197111e+00</TD>
+						<TD>4.000000000000000e+00</TD>
+						<TD>3.965035106637183e+00</TD>
+						<TD>2.953420636481065e+00</TD>
+						<TD>-8.123180899016266e+01</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>-1.000000000000000e+00</TD>
+						<TD>2.295977804250491e-01</TD>
+						<TD>1.733786457729926e-01</TD>
+						<TD>1.355106487052206e-01</TD>
+						<TD>1.036806552925342e-02</TD>
+						<TD>1.178810194465884e+00</TD>
+						<TD>1.207711884556533e+00</TD>
+						<TD>3.236233639865777e+01</TD>
+						<TD>-1.012165366974160e+01</TD>
+						<TD>3.666060316383839e+03</TD>
+						<TD>1577</TD>
+						<TD>1625</TD>
+						<TD>236</TD>
+						<TD>3.236267758436411e+01</TD>
+						<TD>-1.012138785482694e+01</TD>
+						<TD>3.660865993738174e+03</TD>
+					</TR>
+					<TR>
+						<TD>SoFiA J020919.98-100807.1</TD>
+						<TD>4</TD>
+						<TD>1.663956571008983e+03</TD>
+						<TD>1.583248258808677e+03</TD>
+						<TD>2.203723572913055e+02</TD>
+						<TD>1657</TD>
+						<TD>1671</TD>
+						<TD>1577</TD>
+						<TD>1590</TD>
+						<TD>214</TD>
+						<TD>230</TD>
+						<TD>327</TD>
+						<TD>-3.044749319087714e-04</TD>
+						<TD>1.720673986710608e-03</TD>
+						<TD>1.715285442114691e-01</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0</TD>
+						<TD>4.406613209892390e-04</TD>
+						<TD>1.536032739621299e+01</TD>
+						<TD>1.327612261791511e+01</TD>
+						<TD>1.548825312999396e+01</TD>
+						<TD>7.170437989259704e+00</TD>
+						<TD>3.962141151953609e+00</TD>
+						<TD>7.388380512739832e+01</TD>
+						<TD>6.963666072423617e+00</TD>
+						<TD>1.959876847910557e+00</TD>
+						<TD>8.727911684232485e+01</TD>
+						<TD>-1.000000000000000e+00</TD>
+						<TD>1.609468457927734e-01</TD>
+						<TD>1.070295711223025e-01</TD>
+						<TD>2.316929622006701e-01</TD>
+						<TD>7.968540941717362e-03</TD>
+						<TD>2.941834917247001e+00</TD>
+						<TD>3.150696474204587e+00</TD>
+						<TD>3.233323143078434e+01</TD>
+						<TD>-1.013530146277944e+01</TD>
+						<TD>3.749928437888622e+03</TD>
+						<TD>1666</TD>
+						<TD>1584</TD>
+						<TD>214</TD>
+						<TD>3.233253953365062e+01</TD>
+						<TD>-1.013505076517089e+01</TD>
+						<TD>3.786244724571705e+03</TD>
+					</TR>
+					<TR>
+						<TD>SoFiA J020929.41-100740.9</TD>
+						<TD>5</TD>
+						<TD>1.547832996241706e+03</TD>
+						<TD>1.605063514214000e+03</TD>
+						<TD>2.220461657172379e+02</TD>
+						<TD>1544</TD>
+						<TD>1554</TD>
+						<TD>1598</TD>
+						<TD>1612</TD>
+						<TD>220</TD>
+						<TD>224</TD>
+						<TD>158</TD>
+						<TD>-3.063093172386289e-04</TD>
+						<TD>1.592539716511965e-03</TD>
+						<TD>7.218251683229937e-02</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0</TD>
+						<TD>5.081611196527037e-04</TD>
+						<TD>1.958964552917727e+00</TD>
+						<TD>1.184864786623443e+00</TD>
+						<TD>2.150538891310994e+00</TD>
+						<TD>7.415844513654036e+00</TD>
+						<TD>2.678609618599631e+00</TD>
+						<TD>-2.030945383358150e+01</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>-1.000000000000000e+00</TD>
+						<TD>1.785599909197234e-01</TD>
+						<TD>3.117301251436201e-01</TD>
+						<TD>7.523765779330611e-02</TD>
+						<TD>6.387486228338730e-03</TD>
+						<TD>1.544410512239935e+00</TD>
+						<TD>1.971786689986598e+00</TD>
+						<TD>3.237255327836889e+01</TD>
+						<TD>-1.012803398436302e+01</TD>
+						<TD>3.740389346659184e+03</TD>
+						<TD>1548</TD>
+						<TD>1607</TD>
+						<TD>222</TD>
+						<TD>3.237249676196527e+01</TD>
+						<TD>-1.012738848619743e+01</TD>
+						<TD>3.740652446687222e+03</TD>
+					</TR>
+					<TR>
+						<TD>SoFiA J020941.53-101111.4</TD>
+						<TD>6</TD>
+						<TD>1.398692709035095e+03</TD>
+						<TD>1.429695209200546e+03</TD>
+						<TD>2.200999674233874e+02</TD>
+						<TD>1396</TD>
+						<TD>1401</TD>
+						<TD>1426</TD>
+						<TD>1433</TD>
+						<TD>215</TD>
+						<TD>224</TD>
+						<TD>131</TD>
+						<TD>1.796215219656006e-04</TD>
+						<TD>1.258751377463341e-03</TD>
+						<TD>9.602238574007060e-02</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0</TD>
+						<TD>7.280139328644819e-04</TD>
+						<TD>5.675577422080631e+00</TD>
+						<TD>4.308284404316063e+00</TD>
+						<TD>5.625524323618671e+00</TD>
+						<TD>3.060934784412255e+00</TD>
+						<TD>2.470332412230457e+00</TD>
+						<TD>-2.404508609136050e+01</TD>
+						<TD>1.101846853600242e+00</TD>
+						<TD>5.532362296239312e-01</TD>
+						<TD>7.441766529753070e+01</TD>
+						<TD>-1.000000000000000e+00</TD>
+						<TD>1.151944127447627e-01</TD>
+						<TD>1.365498489756441e-01</TD>
+						<TD>1.748908903832857e-01</TD>
+						<TD>8.332500316487851e-03</TD>
+						<TD>1.574917679641491e+00</TD>
+						<TD>1.601305263202888e+00</TD>
+						<TD>3.242305991451919e+01</TD>
+						<TD>-1.018648870246425e+01</TD>
+						<TD>3.751480797052383e+03</TD>
+						<TD>1400</TD>
+						<TD>1430</TD>
+						<TD>221</TD>
+						<TD>3.242261716120140e+01</TD>
+						<TD>-1.018638715126978e+01</TD>
+						<TD>3.746351480722427e+03</TD>
+					</TR>
+					<TR>
+						<TD>SoFiA J020919.22-095203.2</TD>
+						<TD>7</TD>
+						<TD>1.673384921083531e+03</TD>
+						<TD>2.386449157335248e+03</TD>
+						<TD>2.086713720241142e+02</TD>
+						<TD>1655</TD>
+						<TD>1695</TD>
+						<TD>2367</TD>
+						<TD>2408</TD>
+						<TD>196</TD>
+						<TD>221</TD>
+						<TD>4554</TD>
+						<TD>-2.789992722682655e-04</TD>
+						<TD>3.194421762600541e-03</TD>
+						<TD>6.021344103146248e+00</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0</TD>
+						<TD>4.039300675523696e-04</TD>
+						<TD>2.429351574018539e+01</TD>
+						<TD>2.251492425477105e+01</TD>
+						<TD>2.312204189622853e+01</TD>
+						<TD>2.212419195054743e+01</TD>
+						<TD>9.008435992684650e+00</TD>
+						<TD>4.341750883830542e+01</TD>
+						<TD>2.420769108299385e+01</TD>
+						<TD>1.046640547010400e+01</TD>
+						<TD>4.397971349701425e+01</TD>
+						<TD>4.143827552101843e+01</TD>
+						<TD>3.886275219216793e-02</TD>
+						<TD>3.938018196334900e-02</TD>
+						<TD>2.986901449162742e-02</TD>
+						<TD>2.725854656065530e-02</TD>
+						<TD>3.018918969749130e+01</TD>
+						<TD>3.096206213347059e+01</TD>
+						<TD>3.233008718754186e+01</TD>
+						<TD>-9.867565972659465e+00</TD>
+						<TD>3.816612768173218e+03</TD>
+						<TD>1672</TD>
+						<TD>2385</TD>
+						<TD>218</TD>
+						<TD>3.233055567461209e+01</TD>
+						<TD>-9.868049114578579e+00</TD>
+						<TD>3.763448583900928e+03</TD>
+					</TR>
+					<TR>
+						<TD>SoFiA J020934.83-100825.3</TD>
+						<TD>8</TD>
+						<TD>1.481234549515485e+03</TD>
+						<TD>1.568042179524980e+03</TD>
+						<TD>2.147149866814316e+02</TD>
+						<TD>1465</TD>
+						<TD>1497</TD>
+						<TD>1553</TD>
+						<TD>1579</TD>
+						<TD>209</TD>
+						<TD>221</TD>
+						<TD>2034</TD>
+						<TD>-4.453613655641675e-04</TD>
+						<TD>1.616266323253512e-03</TD>
+						<TD>1.187101629615768e+00</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0</TD>
+						<TD>3.747324626627183e-04</TD>
+						<TD>8.158050015358631e+00</TD>
+						<TD>4.936679848245483e+00</TD>
+						<TD>7.391103899292396e+00</TD>
+						<TD>1.281662517039943e+01</TD>
+						<TD>1.033159432423067e+01</TD>
+						<TD>-8.695234759070463e+01</TD>
+						<TD>1.182613042313667e+01</TD>
+						<TD>9.939625081900775e+00</TD>
+						<TD>-8.468383978204804e+01</TD>
+						<TD>3.348534161955719e+01</TD>
+						<TD>9.563160523722020e-02</TD>
+						<TD>7.439677372601196e-02</TD>
+						<TD>3.156865385668852e-02</TD>
+						<TD>1.690039252141861e-02</TD>
+						<TD>9.599570771506146e+00</TD>
+						<TD>1.018935360062846e+01</TD>
+						<TD>3.239510441013108e+01</TD>
+						<TD>-1.014037476729500e+01</TD>
+						<TD>3.782169990062714e+03</TD>
+						<TD>1479</TD>
+						<TD>1570</TD>
+						<TD>215</TD>
+						<TD>3.239586106515075e+01</TD>
+						<TD>-1.013972214497351e+01</TD>
+						<TD>3.780545689046383e+03</TD>
+					</TR>
+					<TR>
+						<TD>SoFiA J020817.53-101418.3</TD>
+						<TD>9</TD>
+						<TD>2.431982842524386e+03</TD>
+						<TD>1.273499533886267e+03</TD>
+						<TD>2.063030974530619e+02</TD>
+						<TD>2411</TD>
+						<TD>2452</TD>
+						<TD>1256</TD>
+						<TD>1295</TD>
+						<TD>198</TD>
+						<TD>216</TD>
+						<TD>5461</TD>
+						<TD>-5.635319976136088e-04</TD>
+						<TD>2.519263420253992e-03</TD>
+						<TD>5.725371635868953e+00</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0</TD>
+						<TD>4.476025497997012e-04</TD>
+						<TD>1.551080400561772e+01</TD>
+						<TD>1.028793037202828e+01</TD>
+						<TD>1.292684467091130e+01</TD>
+						<TD>1.675716832217175e+01</TD>
+						<TD>1.430202547127225e+01</TD>
+						<TD>-7.778906823726047e+00</TD>
+						<TD>1.804963359236962e+01</TD>
+						<TD>1.588249396476996e+01</TD>
+						<TD>5.613551625248562e+00</TD>
+						<TD>3.162813246602754e+02</TD>
+						<TD>4.327229156005842e-02</TD>
+						<TD>4.867182238445528e-02</TD>
+						<TD>2.141058150755330e-02</TD>
+						<TD>3.307719245293751e-02</TD>
+						<TD>2.365569690545073e+01</TD>
+						<TD>2.447902741818580e+01</TD>
+						<TD>3.207306066110815e+01</TD>
+						<TD>-1.023840471878508e+01</TD>
+						<TD>3.830109652638435e+03</TD>
+						<TD>2435</TD>
+						<TD>1281</TD>
+						<TD>205</TD>
+						<TD>3.207204114973647e+01</TD>
+						<TD>-1.023590358315947e+01</TD>
+						<TD>3.837536053776741e+03</TD>
+					</TR>
+					<TR>
+						<TD>SoFiA J021122.01-100711.8</TD>
+						<TD>10</TD>
+						<TD>1.622944586730510e+02</TD>
+						<TD>1.628391986787849e+03</TD>
+						<TD>2.014518675005493e+02</TD>
+						<TD>144</TD>
+						<TD>180</TD>
+						<TD>1614</TD>
+						<TD>1645</TD>
+						<TD>189</TD>
+						<TD>215</TD>
+						<TD>5117</TD>
+						<TD>-3.576872404664755e-04</TD>
+						<TD>3.758131992071867e-03</TD>
+						<TD>7.613549539993983e+00</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0</TD>
+						<TD>5.642707270979014e-04</TD>
+						<TD>2.302934385770518e+01</TD>
+						<TD>1.915713400428099e+01</TD>
+						<TD>2.116075581600128e+01</TD>
+						<TD>1.885825950428743e+01</TD>
+						<TD>1.046358098936255e+01</TD>
+						<TD>5.508246134801881e+01</TD>
+						<TD>1.953787541738761e+01</TD>
+						<TD>1.219901976701704e+01</TD>
+						<TD>5.695670094040428e+01</TD>
+						<TD>2.319873056092979e+02</TD>
+						<TD>4.534020464085295e-02</TD>
+						<TD>3.768325367056949e-02</TD>
+						<TD>3.193972317787313e-02</TD>
+						<TD>4.036409589415752e-02</TD>
+						<TD>2.577820385135819e+01</TD>
+						<TD>2.672228224772231e+01</TD>
+						<TD>3.284170351200614e+01</TD>
+						<TD>-1.011994721971288e+01</TD>
+						<TD>3.857756995499134e+03</TD>
+						<TD>171</TD>
+						<TD>1624</TD>
+						<TD>202</TD>
+						<TD>3.283875777129952e+01</TD>
+						<TD>-1.012141524909619e+01</TD>
+						<TD>3.854633167445660e+03</TD>
+					</TR>
+					<TR>
+						<TD>SoFiA J020816.30-101350.7</TD>
+						<TD>11</TD>
+						<TD>2.447151215101421e+03</TD>
+						<TD>1.296446246402297e+03</TD>
+						<TD>2.097708445474425e+02</TD>
+						<TD>2442</TD>
+						<TD>2451</TD>
+						<TD>1294</TD>
+						<TD>1301</TD>
+						<TD>208</TD>
+						<TD>212</TD>
+						<TD>103</TD>
+						<TD>-1.834315480664372e-05</TD>
+						<TD>1.224593725055456e-03</TD>
+						<TD>7.514384163368959e-02</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0</TD>
+						<TD>8.293574268757591e-04</TD>
+						<TD>3.741282182414124e+00</TD>
+						<TD>2.962363307132001e+00</TD>
+						<TD>3.618590924072256e+00</TD>
+						<TD>4.777774804785688e+00</TD>
+						<TD>2.823515338114334e+00</TD>
+						<TD>-5.881302772384089e+01</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>-1.000000000000000e+00</TD>
+						<TD>2.422747313760014e-01</TD>
+						<TD>2.090936576160454e-01</TD>
+						<TD>1.051286327002189e-01</TD>
+						<TD>8.417058594065979e-03</TD>
+						<TD>1.220095284454725e+00</TD>
+						<TD>1.295896620533174e+00</TD>
+						<TD>3.206793038269711e+01</TD>
+						<TD>-1.023075085674869e+01</TD>
+						<TD>3.810346834003925e+03</TD>
+						<TD>2445</TD>
+						<TD>1295</TD>
+						<TD>210</TD>
+						<TD>3.206865856432241e+01</TD>
+						<TD>-1.023123364666096e+01</TD>
+						<TD>3.809040868759155e+03</TD>
+					</TR>
+					<TR>
+						<TD>SoFiA J020941.14-101006.5</TD>
+						<TD>12</TD>
+						<TD>1.403522697327618e+03</TD>
+						<TD>1.483764382756857e+03</TD>
+						<TD>2.052346255719666e+02</TD>
+						<TD>1400</TD>
+						<TD>1410</TD>
+						<TD>1477</TD>
+						<TD>1490</TD>
+						<TD>200</TD>
+						<TD>210</TD>
+						<TD>188</TD>
+						<TD>-1.934439351316541e-04</TD>
+						<TD>9.732057224027812e-04</TD>
+						<TD>7.874650751364243e-02</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0</TD>
+						<TD>4.083068841573515e-04</TD>
+						<TD>9.477490137361697e+00</TD>
+						<TD>8.760589036551112e+00</TD>
+						<TD>9.553839497324002e+00</TD>
+						<TD>6.816358693763531e+00</TD>
+						<TD>3.102100148259443e+00</TD>
+						<TD>-2.751564035029484e+01</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>-1.000000000000000e+00</TD>
+						<TD>1.322035609963891e-01</TD>
+						<TD>2.091045681353977e-01</TD>
+						<TD>1.944277609241525e-01</TD>
+						<TD>5.598421937497527e-03</TD>
+						<TD>1.922323077122406e+00</TD>
+						<TD>2.129460112483228e+00</TD>
+						<TD>3.242142228882284e+01</TD>
+						<TD>-1.016846581011848e+01</TD>
+						<TD>3.836198913872242e+03</TD>
+						<TD>1403</TD>
+						<TD>1483</TD>
+						<TD>208</TD>
+						<TD>3.242159932784773e+01</TD>
+						<TD>-1.016872058679211e+01</TD>
+						<TD>3.820438942074776e+03</TD>
+					</TR>
+					<TR>
+						<TD>SoFiA J020905.15-094159.8</TD>
+						<TD>13</TD>
+						<TD>1.846787020034569e+03</TD>
+						<TD>2.889258885553563e+03</TD>
+						<TD>2.054590036462439e+02</TD>
+						<TD>1845</TD>
+						<TD>1849</TD>
+						<TD>2887</TD>
+						<TD>2891</TD>
+						<TD>203</TD>
+						<TD>207</TD>
+						<TD>42</TD>
+						<TD>-8.874648483470082e-05</TD>
+						<TD>1.979897497221828e-03</TD>
+						<TD>4.337912642222364e-02</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0</TD>
+						<TD>1.257185921061398e-03</TD>
+						<TD>3.751690814795999e+00</TD>
+						<TD>3.228643118698031e+00</TD>
+						<TD>3.668167411266354e+00</TD>
+						<TD>2.145803561013247e+00</TD>
+						<TD>1.481329751052678e+00</TD>
+						<TD>-3.498627301829356e+01</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>-1.000000000000000e+00</TD>
+						<TD>1.658451570626147e-01</TD>
+						<TD>1.814545738906047e-01</TD>
+						<TD>2.442494048707055e-01</TD>
+						<TD>8.147495964087976e-03</TD>
+						<TD>7.276413197457087e-01</TD>
+						<TD>7.793389999689411e-01</TD>
+						<TD>3.227147767810717e+01</TD>
+						<TD>-9.699943343703186e+00</TD>
+						<TD>3.834920174837112e+03</TD>
+						<TD>1847</TD>
+						<TD>2889</TD>
+						<TD>206</TD>
+						<TD>3.227140562476541e+01</TD>
+						<TD>-9.700029616052429e+00</TD>
+						<TD>3.831837016344070e+03</TD>
+					</TR>
+					<TR>
+						<TD>SoFiA J020924.71-100814.6</TD>
+						<TD>14</TD>
+						<TD>1.605649827469035e+03</TD>
+						<TD>1.577035123043103e+03</TD>
+						<TD>1.747452767617581e+02</TD>
+						<TD>1588</TD>
+						<TD>1621</TD>
+						<TD>1549</TD>
+						<TD>1601</TD>
+						<TD>131</TD>
+						<TD>205</TD>
+						<TD>9147</TD>
+						<TD>-3.310807805974036e-04</TD>
+						<TD>2.026525326073170e-03</TD>
+						<TD>6.495611406824654e+00</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0</TD>
+						<TD>3.186255736299475e-04</TD>
+						<TD>6.295793561662641e+01</TD>
+						<TD>9.078530270423105e+00</TD>
+						<TD>6.534202571351311e+01</TD>
+						<TD>2.128833134612171e+01</TD>
+						<TD>1.455236263049824e+01</TD>
+						<TD>4.163593542266369e+00</TD>
+						<TD>2.182467571907414e+01</TD>
+						<TD>1.520674558396064e+01</TD>
+						<TD>2.160481477038871e+00</TD>
+						<TD>1.825183327416020e+02</TD>
+						<TD>3.433129018290514e-02</TD>
+						<TD>4.846866790884425e-02</TD>
+						<TD>9.261826661253794e-02</TD>
+						<TD>3.047333387071813e-02</TD>
+						<TD>2.913136072190946e+01</TD>
+						<TD>3.069011132142526e+01</TD>
+						<TD>3.235297488808311e+01</TD>
+						<TD>-1.013737524041000e+01</TD>
+						<TD>4.009958956837654e+03</TD>
+						<TD>1615</TD>
+						<TD>1580</TD>
+						<TD>192</TD>
+						<TD>3.234980885522036e+01</TD>
+						<TD>-1.013638658941707e+01</TD>
+						<TD>3.911623560249805e+03</TD>
+					</TR>
+					<TR>
+						<TD>SoFiA J021017.28-101914.3</TD>
+						<TD>15</TD>
+						<TD>9.592059093646807e+02</TD>
+						<TD>1.027117457568248e+03</TD>
+						<TD>1.789569640943163e+02</TD>
+						<TD>923</TD>
+						<TD>1014</TD>
+						<TD>980</TD>
+						<TD>1084</TD>
+						<TD>153</TD>
+						<TD>205</TD>
+						<TD>38172</TD>
+						<TD>-5.285803345032036e-04</TD>
+						<TD>4.564432427287102e-03</TD>
+						<TD>4.339683647744732e+01</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0</TD>
+						<TD>3.541324735269564e-04</TD>
+						<TD>4.647898555164335e+01</TD>
+						<TD>4.220580443284501e+01</TD>
+						<TD>4.343920282723187e+01</TD>
+						<TD>4.498758711623603e+01</TD>
+						<TD>2.080959009178869e+01</TD>
+						<TD>-3.279008334967072e+01</TD>
+						<TD>5.959765890302424e+01</TD>
+						<TD>2.666435930605061e+01</TD>
+						<TD>-3.310600492084443e+01</TD>
+						<TD>3.222296407011847e+02</TD>
+						<TD>2.537028424721609e-02</TD>
+						<TD>3.385401149632626e-02</TD>
+						<TD>1.901997288641384e-02</TD>
+						<TD>6.918918428305731e-02</TD>
+						<TD>8.571968496275572e+01</TD>
+						<TD>8.973327937715744e+01</TD>
+						<TD>3.257197955074148e+01</TD>
+						<TD>-1.032063240845161e+01</TD>
+						<TD>3.985956366896629e+03</TD>
+						<TD>966</TD>
+						<TD>1040</TD>
+						<TD>191</TD>
+						<TD>3.256967513011052e+01</TD>
+						<TD>-1.031633948242075e+01</TD>
+						<TD>3.917322600781918e+03</TD>
+					</TR>
+					<TR>
+						<TD>SoFiA J020937.51-100940.9</TD>
+						<TD>16</TD>
+						<TD>1.448218783561969e+03</TD>
+						<TD>1.505045136158085e+03</TD>
+						<TD>1.961152314767467e+02</TD>
+						<TD>1445</TD>
+						<TD>1452</TD>
+						<TD>1500</TD>
+						<TD>1510</TD>
+						<TD>192</TD>
+						<TD>202</TD>
+						<TD>158</TD>
+						<TD>-1.478698541177437e-04</TD>
+						<TD>9.215764584951103e-04</TD>
+						<TD>5.396162387728509e-02</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0</TD>
+						<TD>3.807626349655244e-04</TD>
+						<TD>9.880758923591452e+00</TD>
+						<TD>8.932038595412836e+00</TD>
+						<TD>9.696697482918621e+00</TD>
+						<TD>5.020807558295271e+00</TD>
+						<TD>2.272709895598949e+00</TD>
+						<TD>-3.583867675294997e+01</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>-1.000000000000000e+00</TD>
+						<TD>1.566833069148417e-01</TD>
+						<TD>2.137022776462374e-01</TD>
+						<TD>2.740349061847205e-01</TD>
+						<TD>4.786112107062526e-03</TD>
+						<TD>1.540858819423592e+00</TD>
+						<TD>1.653683622924108e+00</TD>
+						<TD>3.240628545340255e+01</TD>
+						<TD>-1.016137337749197e+01</TD>
+						<TD>3.888170691788197e+03</TD>
+						<TD>1448</TD>
+						<TD>1504</TD>
+						<TD>195</TD>
+						<TD>3.240635956256939e+01</TD>
+						<TD>-1.016172175226431e+01</TD>
+						<TD>3.894526440143585e+03</TD>
+					</TR>
+					<TR>
+						<TD>SoFiA J020937.03-100953.0</TD>
+						<TD>17</TD>
+						<TD>1.454167108724652e+03</TD>
+						<TD>1.495017969943883e+03</TD>
+						<TD>1.964065264237738e+02</TD>
+						<TD>1451</TD>
+						<TD>1458</TD>
+						<TD>1491</TD>
+						<TD>1498</TD>
+						<TD>193</TD>
+						<TD>199</TD>
+						<TD>74</TD>
+						<TD>1.232202193932608e-04</TD>
+						<TD>9.308277512900531e-04</TD>
+						<TD>4.714238845917862e-02</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0</TD>
+						<TD>4.711577445020173e-04</TD>
+						<TD>6.000000000000000e+00</TD>
+						<TD>6.000000000000000e+00</TD>
+						<TD>6.000000000000000e+00</TD>
+						<TD>3.992161054996041e+00</TD>
+						<TD>2.777347183673727e+00</TD>
+						<TD>3.998463086674036e+01</TD>
+						<TD>1.992293509473468e+00</TD>
+						<TD>-nan</TD>
+						<TD>9.657322926688835e+00</TD>
+						<TD>-1.000000000000000e+00</TD>
+						<TD>1.427693352747270e-01</TD>
+						<TD>1.493156554210565e-01</TD>
+						<TD>1.482046352157743e-01</TD>
+						<TD>4.053052170292518e-03</TD>
+						<TD>1.589608195785192e+00</TD>
+						<TD>1.602092072725164e+00</TD>
+						<TD>3.240427124470519e+01</TD>
+						<TD>-1.016471586715199e+01</TD>
+						<TD>3.886510590374470e+03</TD>
+						<TD>1454</TD>
+						<TD>1496</TD>
+						<TD>196</TD>
+						<TD>3.240432781988630e+01</TD>
+						<TD>-1.016438852113278e+01</TD>
+						<TD>3.888827400505543e+03</TD>
+					</TR>
+					<TR>
+						<TD>SoFiA J020940.01-101135.0</TD>
+						<TD>18</TD>
+						<TD>1.417421453463392e+03</TD>
+						<TD>1.409962030187828e+03</TD>
+						<TD>1.947541702500482e+02</TD>
+						<TD>1416</TD>
+						<TD>1420</TD>
+						<TD>1408</TD>
+						<TD>1412</TD>
+						<TD>192</TD>
+						<TD>198</TD>
+						<TD>45</TD>
+						<TD>-5.944566510152072e-06</TD>
+						<TD>9.114461718127131e-04</TD>
+						<TD>2.176364069214287e-02</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0</TD>
+						<TD>6.272287058370095e-04</TD>
+						<TD>5.634953573419959e+00</TD>
+						<TD>4.967025701992478e+00</TD>
+						<TD>5.626515562240993e+00</TD>
+						<TD>1.917646746898442e+00</TD>
+						<TD>1.688385560850054e+00</TD>
+						<TD>-8.011311861418663e+01</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>-1.000000000000000e+00</TD>
+						<TD>1.891850353769055e-01</TD>
+						<TD>1.693112212637714e-01</TD>
+						<TD>3.460467969618057e-01</TD>
+						<TD>4.207578071072317e-03</TD>
+						<TD>7.069033980859717e-01</TD>
+						<TD>7.613629534649595e-01</TD>
+						<TD>3.241671759502486e+01</TD>
+						<TD>-1.019306702816150e+01</TD>
+						<TD>3.895927433669567e+03</TD>
+						<TD>1417</TD>
+						<TD>1410</TD>
+						<TD>195</TD>
+						<TD>3.241686033123101e+01</TD>
+						<TD>-1.019305435942495e+01</TD>
+						<TD>3.894526440143585e+03</TD>
+					</TR>
+					<TR>
+						<TD>SoFiA J020952.46-101055.9</TD>
+						<TD>19</TD>
+						<TD>1.264248780717177e+03</TD>
+						<TD>1.442558077103060e+03</TD>
+						<TD>1.912209231257696e+02</TD>
+						<TD>1254</TD>
+						<TD>1276</TD>
+						<TD>1427</TD>
+						<TD>1452</TD>
+						<TD>187</TD>
+						<TD>196</TD>
+						<TD>674</TD>
+						<TD>5.647115904139355e-05</TD>
+						<TD>1.549891079775989e-03</TD>
+						<TD>5.515994749584934e-01</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0</TD>
+						<TD>3.571858224120036e-04</TD>
+						<TD>5.692811793765704e+00</TD>
+						<TD>3.380464370811340e+00</TD>
+						<TD>5.324942765653001e+00</TD>
+						<TD>1.193464126240745e+01</TD>
+						<TD>6.760042457707924e+00</TD>
+						<TD>3.640759962453214e+01</TD>
+						<TD>1.110613272205943e+01</TD>
+						<TD>6.562733080258957e+00</TD>
+						<TD>3.525525092527258e+01</TD>
+						<TD>2.190861175657558e+02</TD>
+						<TD>7.765742708688547e-02</TD>
+						<TD>9.113965886572625e-02</TD>
+						<TD>3.178954534487614e-02</TD>
+						<TD>9.273083290225638e-03</TD>
+						<TD>8.129435479203478e+00</TD>
+						<TD>8.284629727208712e+00</TD>
+						<TD>3.246859121676285e+01</TD>
+						<TD>-1.018219320243045e+01</TD>
+						<TD>3.916063550949097e+03</TD>
+						<TD>1267</TD>
+						<TD>1445</TD>
+						<TD>191</TD>
+						<TD>3.246765926702408e+01</TD>
+						<TD>-1.018137945228804e+01</TD>
+						<TD>3.917322600781918e+03</TD>
+					</TR>
+					<TR>
+						<TD>SoFiA J020941.64-101144.7</TD>
+						<TD>20</TD>
+						<TD>1.397342725011219e+03</TD>
+						<TD>1.401916394722591e+03</TD>
+						<TD>1.919653815092118e+02</TD>
+						<TD>1393</TD>
+						<TD>1403</TD>
+						<TD>1399</TD>
+						<TD>1407</TD>
+						<TD>187</TD>
+						<TD>195</TD>
+						<TD>219</TD>
+						<TD>-1.009511397569440e-04</TD>
+						<TD>1.445220666937530e-03</TD>
+						<TD>1.310221463645576e-01</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0</TD>
+						<TD>4.040985228240325e-04</TD>
+						<TD>5.904419672360148e+00</TD>
+						<TD>4.504008531727186e+00</TD>
+						<TD>5.383167932641646e+00</TD>
+						<TD>5.549350710886039e+00</TD>
+						<TD>3.016920457357895e+00</TD>
+						<TD>-6.949887213755824e+01</TD>
+						<TD>4.524958720337894e+00</TD>
+						<TD>2.110621357091862e+00</TD>
+						<TD>-7.276749453445312e+01</TD>
+						<TD>3.119265237484938e+02</TD>
+						<TD>1.221403799069595e-01</TD>
+						<TD>7.981965645135528e-02</TD>
+						<TD>7.238636607182242e-02</TD>
+						<TD>5.980112033777942e-03</TD>
+						<TD>2.994305405741239e+00</TD>
+						<TD>3.086986583728709e+00</TD>
+						<TD>3.242351812606721e+01</TD>
+						<TD>-1.019574826049358e+01</TD>
+						<TD>3.911820852518082e+03</TD>
+						<TD>1395</TD>
+						<TD>1402</TD>
+						<TD>193</TD>
+						<TD>3.242431156080974e+01</TD>
+						<TD>-1.019572030749502e+01</TD>
+						<TD>3.905924520015717e+03</TD>
+					</TR>
+					<TR>
+						<TD>SoFiA J020905.78-101911.8</TD>
+						<TD>21</TD>
+						<TD>1.838431904836705e+03</TD>
+						<TD>1.029278487378631e+03</TD>
+						<TD>1.821080522707763e+02</TD>
+						<TD>1826</TD>
+						<TD>1853</TD>
+						<TD>1014</TD>
+						<TD>1043</TD>
+						<TD>166</TD>
+						<TD>195</TD>
+						<TD>3829</TD>
+						<TD>-2.068997418973595e-04</TD>
+						<TD>2.872771350666881e-03</TD>
+						<TD>4.296721873258093e+00</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0</TD>
+						<TD>3.841136176492685e-04</TD>
+						<TD>2.714190936141085e+01</TD>
+						<TD>2.348012536982974e+01</TD>
+						<TD>2.649762327887179e+01</TD>
+						<TD>1.555059294397535e+01</TD>
+						<TD>8.203087734230769e+00</TD>
+						<TD>5.024419693147684e+01</TD>
+						<TD>1.664546529320799e+01</TD>
+						<TD>9.946187344464040e+00</TD>
+						<TD>4.655664928691121e+01</TD>
+						<TD>2.303442465496511e+02</TD>
+						<TD>3.432746230495963e-02</TD>
+						<TD>3.192319793131560e-02</TD>
+						<TD>4.221750588947130e-02</TD>
+						<TD>2.376853351951602e-02</TD>
+						<TD>2.470560880872229e+01</TD>
+						<TD>2.542851875145972e+01</TD>
+						<TD>3.227408431340627e+01</TD>
+						<TD>-1.031994300419400e+01</TD>
+						<TD>3.967998180329800e+03</TD>
+						<TD>1833</TD>
+						<TD>1033</TD>
+						<TD>192</TD>
+						<TD>3.227592516927882e+01</TD>
+						<TD>-1.031870312970779e+01</TD>
+						<TD>3.911623560249805e+03</TD>
+					</TR>
+					<TR>
+						<TD>SoFiA J020942.79-101029.0</TD>
+						<TD>22</TD>
+						<TD>1.383283065016584e+03</TD>
+						<TD>1.465033024905294e+03</TD>
+						<TD>1.892341346168372e+02</TD>
+						<TD>1377</TD>
+						<TD>1394</TD>
+						<TD>1460</TD>
+						<TD>1470</TD>
+						<TD>183</TD>
+						<TD>194</TD>
+						<TD>630</TD>
+						<TD>-3.382997601875104e-05</TD>
+						<TD>1.510801608674228e-03</TD>
+						<TD>4.780125365123240e-01</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0</TD>
+						<TD>4.691060335101379e-04</TD>
+						<TD>8.821638675840063e+00</TD>
+						<TD>6.730633486041735e+00</TD>
+						<TD>8.155076053599709e+00</TD>
+						<TD>6.011723688637717e+00</TD>
+						<TD>3.697534246050906e+00</TD>
+						<TD>8.868854448657007e+01</TD>
+						<TD>5.347247759560994e+00</TD>
+						<TD>3.592057601062921e+00</TD>
+						<TD>-8.852929031196088e+01</TD>
+						<TD>2.368535319518196e+02</TD>
+						<TD>8.005776507807418e-02</TD>
+						<TD>4.646010613314813e-02</TD>
+						<TD>6.378183757817603e-02</TD>
+						<TD>1.177446799331661e-02</TD>
+						<TD>5.548284192391675e+00</TD>
+						<TD>5.692059291679804e+00</TD>
+						<TD>3.242827726653260e+01</TD>
+						<TD>-1.017470884606168e+01</TD>
+						<TD>3.927386339604855e+03</TD>
+						<TD>1384</TD>
+						<TD>1465</TD>
+						<TD>189</TD>
+						<TD>3.242803447120809e+01</TD>
+						<TD>-1.017471988336498e+01</TD>
+						<TD>3.928720682382584e+03</TD>
+					</TR>
+					<TR>
+						<TD>SoFiA J020943.14-101207.9</TD>
+						<TD>23</TD>
+						<TD>1.378955871765683e+03</TD>
+						<TD>1.382579660886089e+03</TD>
+						<TD>1.900193031301798e+02</TD>
+						<TD>1376</TD>
+						<TD>1382</TD>
+						<TD>1379</TD>
+						<TD>1387</TD>
+						<TD>188</TD>
+						<TD>193</TD>
+						<TD>122</TD>
+						<TD>-3.449990254011936e-05</TD>
+						<TD>1.422287547029555e-03</TD>
+						<TD>8.194975916421754e-02</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0</TD>
+						<TD>5.562452184990223e-04</TD>
+						<TD>4.755155837783939e+00</TD>
+						<TD>3.904683964676454e+00</TD>
+						<TD>4.666014575651624e+00</TD>
+						<TD>3.463752850548840e+00</TD>
+						<TD>2.726348909437923e+00</TD>
+						<TD>-5.018054650956998e-01</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>-1.000000000000000e+00</TD>
+						<TD>1.030133592408381e-01</TD>
+						<TD>1.313228009870802e-01</TD>
+						<TD>1.084269679000303e-01</TD>
+						<TD>6.143929252405912e-03</TD>
+						<TD>1.822897211086270e+00</TD>
+						<TD>1.911410192764206e+00</TD>
+						<TD>3.242974624482766e+01</TD>
+						<TD>-1.020219312464113e+01</TD>
+						<TD>3.922911632120609e+03</TD>
+						<TD>1379</TD>
+						<TD>1382</TD>
+						<TD>190</TD>
+						<TD>3.242973132397556e+01</TD>
+						<TD>-1.020238634683702e+01</TD>
+						<TD>3.923021641433239e+03</TD>
+					</TR>
+					<TR>
+						<TD>SoFiA J020937.96-101034.4</TD>
+						<TD>24</TD>
+						<TD>1.442650229143045e+03</TD>
+						<TD>1.460464831226164e+03</TD>
+						<TD>1.907810799142422e+02</TD>
+						<TD>1438</TD>
+						<TD>1448</TD>
+						<TD>1456</TD>
+						<TD>1465</TD>
+						<TD>188</TD>
+						<TD>192</TD>
+						<TD>112</TD>
+						<TD>-4.692213769885711e-05</TD>
+						<TD>1.307800994254649e-03</TD>
+						<TD>6.184851309717487e-02</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0</TD>
+						<TD>3.818354585872850e-04</TD>
+						<TD>2.521519235849188e+00</TD>
+						<TD>1.344117753746045e+00</TD>
+						<TD>2.596922494387930e+00</TD>
+						<TD>5.839126618241176e+00</TD>
+						<TD>3.136121134377673e+00</TD>
+						<TD>-3.728691311792071e+01</TD>
+						<TD>5.025593773955976e+00</TD>
+						<TD>1.468042484396632e+00</TD>
+						<TD>-1.160680531551225e+01</TD>
+						<TD>-1.000000000000000e+00</TD>
+						<TD>1.477460865961667e-01</TD>
+						<TD>1.604283737713731e-01</TD>
+						<TD>7.431596070993036e-02</TD>
+						<TD>4.040966660673034e-03</TD>
+						<TD>2.091725548038612e+00</TD>
+						<TD>2.454449098649310e+00</TD>
+						<TD>3.240817212043447e+01</TD>
+						<TD>-1.017623337359672e+01</TD>
+						<TD>3.918570235192776e+03</TD>
+						<TD>1441</TD>
+						<TD>1458</TD>
+						<TD>191</TD>
+						<TD>3.240873103984298e+01</TD>
+						<TD>-1.017705495065188e+01</TD>
+						<TD>3.917322600781918e+03</TD>
+					</TR>
+					<TR>
+						<TD>SoFiA J020943.96-101226.7</TD>
+						<TD>25</TD>
+						<TD>1.368806991205185e+03</TD>
+						<TD>1.366948969295807e+03</TD>
+						<TD>1.899250626687133e+02</TD>
+						<TD>1367</TD>
+						<TD>1371</TD>
+						<TD>1363</TD>
+						<TD>1369</TD>
+						<TD>187</TD>
+						<TD>191</TD>
+						<TD>33</TD>
+						<TD>2.361390797886997e-04</TD>
+						<TD>1.555920927785337e-03</TD>
+						<TD>2.588188002118841e-02</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0</TD>
+						<TD>7.399264044639494e-04</TD>
+						<TD>3.665136243922180e+00</TD>
+						<TD>5.000000000000000e-01</TD>
+						<TD>3.848792458778464e+00</TD>
+						<TD>3.325074266087814e+00</TD>
+						<TD>2.073912662842045e+00</TD>
+						<TD>1.250236428042382e+01</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>-1.000000000000000e+00</TD>
+						<TD>1.849293015084007e-01</TD>
+						<TD>3.321990162377675e-01</TD>
+						<TD>2.842213950419306e-01</TD>
+						<TD>4.250553584270793e-03</TD>
+						<TD>8.321680339477953e-01</TD>
+						<TD>8.824725049186215e-01</TD>
+						<TD>3.243318428114718e+01</TD>
+						<TD>-1.020740291149066e+01</TD>
+						<TD>3.923448712348938e+03</TD>
+						<TD>1369</TD>
+						<TD>1367</TD>
+						<TD>191</TD>
+						<TD>3.243311890784828e+01</TD>
+						<TD>-1.020738591004839e+01</TD>
+						<TD>3.917322600781918e+03</TD>
+					</TR>
+					<TR>
+						<TD>SoFiA J020943.25-101643.1</TD>
+						<TD>26</TD>
+						<TD>1.377589064006224e+03</TD>
+						<TD>1.153230041588268e+03</TD>
+						<TD>1.879577198255660e+02</TD>
+						<TD>1371</TD>
+						<TD>1383</TD>
+						<TD>1150</TD>
+						<TD>1157</TD>
+						<TD>186</TD>
+						<TD>191</TD>
+						<TD>159</TD>
+						<TD>3.533495764713734e-04</TD>
+						<TD>1.284508267417550e-03</TD>
+						<TD>1.360265571274795e-01</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0</TD>
+						<TD>6.237082322959161e-04</TD>
+						<TD>3.992606127063685e+00</TD>
+						<TD>3.199632125502152e+00</TD>
+						<TD>3.854208698705601e+00</TD>
+						<TD>5.468283050931396e+00</TD>
+						<TD>2.965819472948677e+00</TD>
+						<TD>-8.751835940995667e+01</TD>
+						<TD>2.732285328952825e+00</TD>
+						<TD>1.086542421520609e+00</TD>
+						<TD>-8.846822824111396e+01</TD>
+						<TD>-1.000000000000000e+00</TD>
+						<TD>1.568675519012533e-01</TD>
+						<TD>9.108413111307061e-02</TD>
+						<TD>6.475337484417898e-02</TD>
+						<TD>7.864661562099015e-03</TD>
+						<TD>2.363765407209927e+00</TD>
+						<TD>2.365278307293292e+00</TD>
+						<TD>3.243021916184189e+01</TD>
+						<TD>-1.027864301462608e+01</TD>
+						<TD>3.934660679996014e+03</TD>
+						<TD>1377</TD>
+						<TD>1153</TD>
+						<TD>188</TD>
+						<TD>3.243041872924370e+01</TD>
+						<TD>-1.027871967017421e+01</TD>
+						<TD>3.934419723510742e+03</TD>
+					</TR>
+					<TR>
+						<TD>SoFiA J021012.65-101854.6</TD>
+						<TD>27</TD>
+						<TD>1.016073701632944e+03</TD>
+						<TD>1.043513349084883e+03</TD>
+						<TD>1.865959285141262e+02</TD>
+						<TD>1014</TD>
+						<TD>1020</TD>
+						<TD>1041</TD>
+						<TD>1048</TD>
+						<TD>183</TD>
+						<TD>189</TD>
+						<TD>34</TD>
+						<TD>-6.624065281357616e-05</TD>
+						<TD>9.022009908221662e-04</TD>
+						<TD>1.516746744265163e-02</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0</TD>
+						<TD>4.834803511827233e-04</TD>
+						<TD>6.000000000000000e+00</TD>
+						<TD>4.092956169700223e+00</TD>
+						<TD>6.000000000000000e+00</TD>
+						<TD>5.332627156760865e+00</TD>
+						<TD>1.264825041041941e+00</TD>
+						<TD>-4.321831325222752e+01</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>-1.000000000000000e+00</TD>
+						<TD>3.767659411461463e-01</TD>
+						<TD>4.226708943366672e-01</TD>
+						<TD>3.340534890995028e-01</TD>
+						<TD>2.819150669849372e-03</TD>
+						<TD>7.352846320469508e-01</TD>
+						<TD>7.975138642497964e-01</TD>
+						<TD>3.255270894984545e+01</TD>
+						<TD>-1.031517722614650e+01</TD>
+						<TD>3.942421584963799e+03</TD>
+						<TD>1015</TD>
+						<TD>1043</TD>
+						<TD>187</TD>
+						<TD>3.255307282065417e+01</TD>
+						<TD>-1.031534816217203e+01</TD>
+						<TD>3.940118764877319e+03</TD>
+					</TR>
+					<TR>
+						<TD>SoFiA J021010.79-101657.5</TD>
+						<TD>28</TD>
+						<TD>1.038880489983343e+03</TD>
+						<TD>1.141100889463163e+03</TD>
+						<TD>1.816770019067929e+02</TD>
+						<TD>1034</TD>
+						<TD>1042</TD>
+						<TD>1136</TD>
+						<TD>1147</TD>
+						<TD>180</TD>
+						<TD>184</TD>
+						<TD>104</TD>
+						<TD>-1.072638115147129e-04</TD>
+						<TD>1.316567533649504e-03</TD>
+						<TD>8.586897222630796e-02</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0</TD>
+						<TD>6.110563956657255e-04</TD>
+						<TD>2.435520290072362e+00</TD>
+						<TD>1.560048994353556e+00</TD>
+						<TD>2.290448221889077e+00</TD>
+						<TD>6.043202204616537e+00</TD>
+						<TD>3.341858887426131e+00</TD>
+						<TD>-2.181057758580161e+01</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>-1.000000000000000e+00</TD>
+						<TD>1.465686046073427e-01</TD>
+						<TD>2.167883148383352e-01</TD>
+						<TD>6.040381870930753e-02</TD>
+						<TD>6.231576970810415e-03</TD>
+						<TD>1.883211103686298e+00</TD>
+						<TD>1.965643275760316e+00</TD>
+						<TD>3.254496565284137e+01</TD>
+						<TD>-1.028265170615371e+01</TD>
+						<TD>3.970454754710197e+03</TD>
+						<TD>1037</TD>
+						<TD>1139</TD>
+						<TD>182</TD>
+						<TD>3.254560306464432e+01</TD>
+						<TD>-1.028335170191716e+01</TD>
+						<TD>3.968613974809647e+03</TD>
+					</TR>
+					<TR>
+						<TD>SoFiA J021015.34-101804.9</TD>
+						<TD>29</TD>
+						<TD>9.830113220164245e+02</TD>
+						<TD>1.084938072401787e+03</TD>
+						<TD>1.800207960345169e+02</TD>
+						<TD>980</TD>
+						<TD>987</TD>
+						<TD>1081</TD>
+						<TD>1088</TD>
+						<TD>178</TD>
+						<TD>184</TD>
+						<TD>108</TD>
+						<TD>-3.329169994685799e-04</TD>
+						<TD>1.203068299219012e-03</TD>
+						<TD>7.545804710844095e-02</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0</TD>
+						<TD>5.339264915316280e-04</TD>
+						<TD>3.119967680240988e+00</TD>
+						<TD>2.132328257635386e+00</TD>
+						<TD>3.173373440600541e+00</TD>
+						<TD>4.436934366005335e+00</TD>
+						<TD>2.543570039954973e+00</TD>
+						<TD>-4.621489518704735e+01</TD>
+						<TD>2.335896062262953e+00</TD>
+						<TD>8.465085408103991e-01</TD>
+						<TD>-5.516591156366097e+01</TD>
+						<TD>-1.000000000000000e+00</TD>
+						<TD>1.355633729674435e-01</TD>
+						<TD>1.218027143426729e-01</TD>
+						<TD>1.138894972705822e-01</TD>
+						<TD>5.548726865038642e-03</TD>
+						<TD>1.858544307144480e+00</TD>
+						<TD>1.978764704799498e+00</TD>
+						<TD>3.256390315942307e+01</TD>
+						<TD>-1.030136318779475e+01</TD>
+						<TD>3.979893542826176e+03</TD>
+						<TD>983</TD>
+						<TD>1086</TD>
+						<TD>179</TD>
+						<TD>3.256390679859589e+01</TD>
+						<TD>-1.030100920891642e+01</TD>
+						<TD>3.985711103439331e+03</TD>
+					</TR>
+					<TR>
+						<TD>SoFiA J021000.63-101516.2</TD>
+						<TD>30</TD>
+						<TD>1.163824207801480e+03</TD>
+						<TD>1.225607349373784e+03</TD>
+						<TD>1.799416549458478e+02</TD>
+						<TD>1158</TD>
+						<TD>1168</TD>
+						<TD>1221</TD>
+						<TD>1232</TD>
+						<TD>177</TD>
+						<TD>181</TD>
+						<TD>134</TD>
+						<TD>2.373340394115075e-04</TD>
+						<TD>1.948408898897469e-03</TD>
+						<TD>1.276909328444162e-01</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0</TD>
+						<TD>3.863119071651843e-04</TD>
+						<TD>2.706711448286702e+00</TD>
+						<TD>1.795289859470290e+00</TD>
+						<TD>2.601335835700739e+00</TD>
+						<TD>6.531283709677038e+00</TD>
+						<TD>2.472559676635603e+00</TD>
+						<TD>-3.994295850806986e+01</TD>
+						<TD>7.103886907855417e+00</TD>
+						<TD>2.520958466719716e+00</TD>
+						<TD>-4.300399858836717e+01</TD>
+						<TD>1.356588551837692e+02</TD>
+						<TD>7.722001740295613e-02</TD>
+						<TD>9.650218373366352e-02</TD>
+						<TD>3.860811725734210e-02</TD>
+						<TD>4.471883630950012e-03</TD>
+						<TD>3.902386414912713e+00</TD>
+						<TD>3.989871747255403e+00</TD>
+						<TD>3.250262767128228e+01</TD>
+						<TD>-1.025450016172218e+01</TD>
+						<TD>3.980344571292400e+03</TD>
+						<TD>1165</TD>
+						<TD>1226</TD>
+						<TD>180</TD>
+						<TD>3.250222933087541e+01</TD>
+						<TD>-1.025436941523245e+01</TD>
+						<TD>3.980012060344219e+03</TD>
+					</TR>
+					<TR>
+						<TD>SoFiA J021017.99-102014.4</TD>
+						<TD>31</TD>
+						<TD>9.504189629398387e+02</TD>
+						<TD>9.769817355180462e+02</TD>
+						<TD>1.706670252508601e+02</TD>
+						<TD>944</TD>
+						<TD>956</TD>
+						<TD>975</TD>
+						<TD>980</TD>
+						<TD>167</TD>
+						<TD>172</TD>
+						<TD>73</TD>
+						<TD>1.968978176591918e-04</TD>
+						<TD>1.615969347767532e-03</TD>
+						<TD>5.385640425083693e-02</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0</TD>
+						<TD>5.159896727988407e-04</TD>
+						<TD>2.733933980305792e+00</TD>
+						<TD>2.334834950764479e+00</TD>
+						<TD>2.727903476044724e+00</TD>
+						<TD>7.192570869602963e+00</TD>
+						<TD>1.607511770651494e+00</TD>
+						<TD>-7.296130418710294e+01</TD>
+						<TD>7.942543586902664e+00</TD>
+						<TD>6.571264899512030e-01</TD>
+						<TD>-6.671716333863245e+01</TD>
+						<TD>-1.000000000000000e+00</TD>
+						<TD>2.597310555687162e-01</TD>
+						<TD>1.074615039576924e-01</TD>
+						<TD>1.002357919231366e-01</TD>
+						<TD>4.408617696938462e-03</TD>
+						<TD>1.669535351914226e+00</TD>
+						<TD>1.707767040770284e+00</TD>
+						<TD>3.257496661487563e+01</TD>
+						<TD>-1.033734271694522e+01</TD>
+						<TD>4.033201093912125e+03</TD>
+						<TD>953</TD>
+						<TD>978</TD>
+						<TD>171</TD>
+						<TD>3.257409186931750e+01</TD>
+						<TD>-1.033700378617588e+01</TD>
+						<TD>4.031303455829620e+03</TD>
+					</TR>
+					<TR>
+						<TD>SoFiA J021018.99-102018.9</TD>
+						<TD>32</TD>
+						<TD>9.381506789154421e+02</TD>
+						<TD>9.732920561690423e+02</TD>
+						<TD>1.697135973457198e+02</TD>
+						<TD>936</TD>
+						<TD>941</TD>
+						<TD>970</TD>
+						<TD>976</TD>
+						<TD>168</TD>
+						<TD>172</TD>
+						<TD>52</TD>
+						<TD>6.066997593734413e-05</TD>
+						<TD>1.241696416400373e-03</TD>
+						<TD>3.455717952601844e-02</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0</TD>
+						<TD>4.357697104245814e-04</TD>
+						<TD>2.764100378304437e+00</TD>
+						<TD>2.062304471828717e+00</TD>
+						<TD>2.661220952668067e+00</TD>
+						<TD>3.521324496678130e+00</TD>
+						<TD>1.520866748442920e+00</TD>
+						<TD>-4.042245994929675e+01</TD>
+						<TD>2.728492372764450e+00</TD>
+						<TD>9.254414633243665e-01</TD>
+						<TD>-3.213944165995444e+01</TD>
+						<TD>-1.000000000000000e+00</TD>
+						<TD>1.264478333679009e-01</TD>
+						<TD>1.300839517010969e-01</TD>
+						<TD>9.984510850995169e-02</TD>
+						<TD>3.142380070459846e-03</TD>
+						<TD>1.502935291234248e+00</TD>
+						<TD>1.594731772182448e+00</TD>
+						<TD>3.257912428294697e+01</TD>
+						<TD>-1.033857024417972e+01</TD>
+						<TD>4.038634722471237e+03</TD>
+						<TD>939</TD>
+						<TD>974</TD>
+						<TD>169</TD>
+						<TD>3.257883635935692e+01</TD>
+						<TD>-1.033833442769497e+01</TD>
+						<TD>4.042701546132565e+03</TD>
+					</TR>
+					<TR>
+						<TD>SoFiA J021028.90-102142.1</TD>
+						<TD>33</TD>
+						<TD>8.162799990757154e+02</TD>
+						<TD>9.038220374912157e+02</TD>
+						<TD>1.684557794763749e+02</TD>
+						<TD>803</TD>
+						<TD>831</TD>
+						<TD>895</TD>
+						<TD>913</TD>
+						<TD>167</TD>
+						<TD>172</TD>
+						<TD>279</TD>
+						<TD>-6.583028880413622e-05</TD>
+						<TD>2.310029231011868e-03</TD>
+						<TD>3.071870160129038e-01</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0</TD>
+						<TD>5.429161519792957e-04</TD>
+						<TD>2.872800105990219e+00</TD>
+						<TD>1.478949958693860e+00</TD>
+						<TD>2.897719048060480e+00</TD>
+						<TD>1.327840421333759e+01</TD>
+						<TD>4.540449243597026e+00</TD>
+						<TD>-6.507780347110695e+01</TD>
+						<TD>1.313875988207301e+01</TD>
+						<TD>4.062954282279041e+00</TD>
+						<TD>-6.318887602249127e+01</TD>
+						<TD>1.128540736864200e+02</TD>
+						<TD>1.701540089120808e-01</TD>
+						<TD>1.012207588527565e-01</TD>
+						<TD>3.296409142220944e-02</TD>
+						<TD>9.068487608985393e-03</TD>
+						<TD>4.629442521962631e+00</TD>
+						<TD>4.730724963612104e+00</TD>
+						<TD>3.262043563617205e+01</TD>
+						<TD>-1.036170063442427e+01</TD>
+						<TD>4.045803083539009e+03</TD>
+						<TD>815</TD>
+						<TD>904</TD>
+						<TD>168</TD>
+						<TD>3.262086933537989e+01</TD>
+						<TD>-1.036164100852913e+01</TD>
+						<TD>4.048400591552258e+03</TD>
+					</TR>
+					<TR>
+						<TD>SoFiA J020955.01-101250.8</TD>
+						<TD>34</TD>
+						<TD>1.232896982348750e+03</TD>
+						<TD>1.346811326634851e+03</TD>
+						<TD>1.665843915636091e+02</TD>
+						<TD>1224</TD>
+						<TD>1239</TD>
+						<TD>1336</TD>
+						<TD>1357</TD>
+						<TD>161</TD>
+						<TD>170</TD>
+						<TD>270</TD>
+						<TD>-2.271509874844924e-04</TD>
+						<TD>1.313921995460987e-03</TD>
+						<TD>1.794050471471564e-01</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0</TD>
+						<TD>4.166868435321207e-04</TD>
+						<TD>6.546595435465955e+00</TD>
+						<TD>5.172219395546767e+00</TD>
+						<TD>6.500859312454216e+00</TD>
+						<TD>1.222599472971906e+01</TD>
+						<TD>3.074105115963540e+00</TD>
+						<TD>-3.594388277926159e+01</TD>
+						<TD>1.139359572084256e+01</TD>
+						<TD>2.246350885353485e+00</TD>
+						<TD>-3.687714698564955e+01</TD>
+						<TD>3.262261481571821e+02</TD>
+						<TD>1.441258501423543e-01</TD>
+						<TD>1.890583885902129e-01</TD>
+						<TD>7.712204419671752e-02</TD>
+						<TD>6.846863508545043e-03</TD>
+						<TD>3.580994808878618e+00</TD>
+						<TD>3.779038645278512e+00</TD>
+						<TD>3.247921811669890e+01</TD>
+						<TD>-1.021410605059920e+01</TD>
+						<TD>4.056468208789825e+03</TD>
+						<TD>1236</TD>
+						<TD>1350</TD>
+						<TD>167</TD>
+						<TD>3.247816682120563e+01</TD>
+						<TD>-1.021304344560722e+01</TD>
+						<TD>4.054099637210369e+03</TD>
+					</TR>
+					<TR>
+						<TD>SoFiA J021030.93-102155.7</TD>
+						<TD>35</TD>
+						<TD>7.913759364346108e+02</TD>
+						<TD>8.924831257625985e+02</TD>
+						<TD>1.680063915998465e+02</TD>
+						<TD>785</TD>
+						<TD>799</TD>
+						<TD>886</TD>
+						<TD>905</TD>
+						<TD>166</TD>
+						<TD>170</TD>
+						<TD>237</TD>
+						<TD>1.337554131168872e-04</TD>
+						<TD>1.810479443520308e-03</TD>
+						<TD>2.754290643933928e-01</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0</TD>
+						<TD>6.158956875785155e-04</TD>
+						<TD>3.359765902291372e+00</TD>
+						<TD>2.268831177988890e+00</TD>
+						<TD>3.115010747402548e+00</TD>
+						<TD>1.029355358214885e+01</TD>
+						<TD>5.751861880663616e+00</TD>
+						<TD>-3.304771549591844e+01</TD>
+						<TD>9.015893833933323e+00</TD>
+						<TD>3.734624675112154e+00</TD>
+						<TD>-4.143743601148741e+01</TD>
+						<TD>-1.000000000000000e+00</TD>
+						<TD>1.294587320001921e-01</TD>
+						<TD>1.644805907983425e-01</TD>
+						<TD>2.860380444008349e-02</TD>
+						<TD>9.481593590781115e-03</TD>
+						<TD>3.969987466388511e+00</TD>
+						<TD>4.008239349729813e+00</TD>
+						<TD>3.262887757772521e+01</TD>
+						<TD>-1.036547426274560e+01</TD>
+						<TD>4.048364165544510e+03</TD>
+						<TD>795</TD>
+						<TD>894</TD>
+						<TD>168</TD>
+						<TD>3.262764911896665e+01</TD>
+						<TD>-1.036496952605599e+01</TD>
+						<TD>4.048400591552258e+03</TD>
+					</TR>
+					<TR>
+						<TD>SoFiA J020954.39-101230.5</TD>
+						<TD>36</TD>
+						<TD>1.240546381430269e+03</TD>
+						<TD>1.363698854831458e+03</TD>
+						<TD>1.650035953675909e+02</TD>
+						<TD>1239</TD>
+						<TD>1244</TD>
+						<TD>1359</TD>
+						<TD>1367</TD>
+						<TD>163</TD>
+						<TD>169</TD>
+						<TD>54</TD>
+						<TD>-4.455533635336906e-04</TD>
+						<TD>1.187443966045976e-03</TD>
+						<TD>1.566484261275036e-02</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0</TD>
+						<TD>4.541312918864284e-04</TD>
+						<TD>4.804864071283879e+00</TD>
+						<TD>5.000000000000000e-01</TD>
+						<TD>6.000000000000000e+00</TD>
+						<TD>5.213175056967909e+00</TD>
+						<TD>2.359140707144148e+00</TD>
+						<TD>-2.202595399308346e+01</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>0.000000000000000e+00</TD>
+						<TD>-1.000000000000000e+00</TD>
+						<TD>2.262313500631454e-01</TD>
+						<TD>3.176240261099166e-01</TD>
+						<TD>2.817173007667372e-01</TD>
+						<TD>3.337169824058040e-03</TD>
+						<TD>6.415173891374204e-01</TD>
+						<TD>1.084794568678523e+00</TD>
+						<TD>3.247662569886671e+01</TD>
+						<TD>-1.020847757296870e+01</TD>
+						<TD>4.065477239072323e+03</TD>
+						<TD>1241</TD>
+						<TD>1366</TD>
+						<TD>163</TD>
+						<TD>3.247647184884358e+01</TD>
+						<TD>-1.020771056525478e+01</TD>
+						<TD>4.076895822107792e+03</TD>
+					</TR>
+				</TABLEDATA>
+			</DATA>
+		</TABLE>
+	</RESOURCE>
+</VOTABLE>

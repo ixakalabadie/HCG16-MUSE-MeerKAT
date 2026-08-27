@@ -126,10 +126,9 @@ def plot_ha_flux_hi_coldens(in_path, num, out_dir):
     cbar.ax.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f"{x:g}"))
     cbar.ax.tick_params(labelsize=12)
     cbar.set_label(f"Flux ({bunit})", rotation=270, fontsize=14, labelpad=20)
-    m0 = ax.contour(nhi, levels=nhi_levels, cmap='Oranges_r', norm='log', transform=ax.get_transform(mom0_wcs)) # colors='white', cmap='bone'
-    styles = ['solid'] * len(m0.levels)
+    styles = ['solid'] * len(nhi_levels)
     styles[0] = 'dashed'
-    m0.set_linestyles(styles)
+    m0 = ax.contour(nhi, levels=nhi_levels, cmap='Oranges_r', norm='log', linestyles=styles, transform=ax.get_transform(mom0_wcs)) # colors='white', cmap='bone'
     plt.xlim(0,ha_data.shape[1])
     plt.ylim(0,ha_data.shape[0])
     add_beam(ax, major=mom0_header['BMAJ'] * u.deg, minor=mom0_header['BMIN'] * u.deg, angle=mom0_header['BPA'], color='w')

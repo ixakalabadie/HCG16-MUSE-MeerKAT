@@ -1,0 +1,60 @@
+# Integrated source spectrum
+# Creator: SoFiA 2.6.0 (29-Oct-2024)
+# Time:    Wed, 26 Aug 2026, 16:19:12
+#
+# Description of parameters:
+#
+# - chan    Spectral channel number (zero-based).
+#
+# - v_opt / v_rad / v_app
+#           Radial velocity corresponding to the channel number as
+#           described by the WCS information in the header. The suf-
+#           fix denotes optical, radio or apparent radial velocity,
+#           respectively.
+#
+# - freq    Frequency corresponding to the channel number as described
+#           by the WCS information in the header.
+#
+# - f_sum   Sum of flux density values of all spatial pixels covered
+#           by the source in that channel. If the unit is Jy, then
+#           the flux density has already been corrected for the solid
+#           angle of the beam. If instead the unit is Jy/beam, you
+#           will need to manually divide by the beam area which, for
+#           Gaussian beams, will be
+#
+#             pi * a * b / (4 * ln(2))
+#
+#           where a and b are the major and minor axis of the beam in
+#           units of pixels.
+#
+# - n_pix   Number of spatial pixels covered by the source in that
+#           channel. This can be used to determine the statistical
+#           uncertainty of the summed flux value. Again, this has
+#           not yet been corrected for any potential spatial correla-
+#           tion of pixels due to the beam solid angle.
+#
+# Note that a WCS-related column will only be present if WCS conversion
+# was explicitly requested when running the pipeline.
+#
+# Header rows:
+#   1 = column number
+#   2 = parameter name
+#   3 = parameter unit
+#
+#        1                 2                 3         4
+#     chan             v_opt             f_sum     n_pix
+#        -               m/s           Jy/beam         -
+#
+       209     3.8147399e+03     6.8624056e-02       510
+       210     3.8090409e+03     1.1388934e-01       510
+       211     3.8033418e+03     1.6066230e-01       510
+       212     3.7976428e+03     1.7853733e-01       510
+       213     3.7919438e+03     2.5951801e-01       510
+       214     3.7862447e+03     2.6016857e-01       510
+       215     3.7805457e+03     2.5657358e-01       510
+       216     3.7748467e+03     2.0181054e-01       510
+       217     3.7691476e+03     2.2530131e-01       510
+       218     3.7634486e+03     1.9837558e-01       510
+       219     3.7577495e+03     7.4909658e-02       510
+       220     3.7520505e+03     1.1367410e-01       510
+       221     3.7463515e+03     3.2175970e-02       510

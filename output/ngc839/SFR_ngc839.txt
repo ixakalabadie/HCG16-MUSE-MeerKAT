@@ -1,0 +1,22 @@
+Synthesis results for NGC839
+SFR_10 (11.3 Myr): 34.090 M_sun/yr
+SFR_20 (22.5 Myr): 19.330 M_sun/yr
+
+Ellipse fit parameters for NGC839
+(Values in pixels unless specified)
+PA: 82.68 deg
+Eccentricity: 0.565
+HLR Effective radius: 38.45
+Semi-major axis: 58.31
+Semi-minor axis: 25.35
+Center (x,y): 221, 221
+
+H-alpha flux and SFR results for NGC839
+Distance: 57.82017 Mpc
+Halpha flux: 2.16195e-13 \pm 3.65707e-17 erg/s/cm^2
+Hbeta flux: 2.77813e-14 \pm 3.86896e-17 erg/s/cm^2
+Balmer decrement (R = Ha/Hb): 7.78203 \pm 0.01092
+Halpha corrected flux: 3.72732e-12 \pm 1.49109e-14 erg/s/cm^2
+Halpha luminosity: 1.49096e+42 \pm 5.96448e+39 erg/s
+Halpha SFR: 1.17786e+01 \pm 4.71194e-02 M_sun/yr
+

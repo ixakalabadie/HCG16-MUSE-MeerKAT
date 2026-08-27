@@ -1,0 +1,22 @@
+Synthesis results for NGC833
+SFR_10 (11.3 Myr): 72.896 M_sun/yr
+SFR_20 (22.5 Myr): 43.830 M_sun/yr
+
+Ellipse fit parameters for NGC833
+(Values in pixels unless specified)
+PA: 79.62 deg
+Eccentricity: 0.593
+HLR Effective radius: 32.49
+Semi-major axis: 50.95
+Semi-minor axis: 20.72
+Center (x,y): 174, 217
+
+H-alpha flux and SFR results for NGC833
+Distance: 57.52652 Mpc
+Halpha flux: 2.26832e-14 \pm 3.04953e-17 erg/s/cm^2
+Hbeta flux: 7.73618e-15 \pm 3.69707e-17 erg/s/cm^2
+Balmer decrement (R = Ha/Hb): 2.93209 \pm 0.01456
+Halpha corrected flux: 2.45846e-14 \pm 3.56323e-16 erg/s/cm^2
+Halpha luminosity: 9.73443e+39 \pm 1.41088e+38 erg/s
+Halpha SFR: 7.69020e-02 \pm 1.11460e-03 M_sun/yr
+

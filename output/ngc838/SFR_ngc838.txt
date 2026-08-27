@@ -1,0 +1,22 @@
+Synthesis results for NGC838
+SFR_10 (11.3 Myr): 389.214 M_sun/yr
+SFR_20 (22.5 Myr): 297.419 M_sun/yr
+
+Ellipse fit parameters for NGC838
+(Values in pixels unless specified)
+PA: 75.18 deg
+Eccentricity: 0.290
+HLR Effective radius: 35.08
+Semi-major axis: 41.64
+Semi-minor axis: 29.55
+Center (x,y): 222, 229
+
+H-alpha flux and SFR results for NGC838
+Distance: 57.44520 Mpc
+Halpha flux: 1.20685e-12 \pm 6.14977e-17 erg/s/cm^2
+Hbeta flux: 2.50345e-13 \pm 7.18494e-17 erg/s/cm^2
+Balmer decrement (R = Ha/Hb): 4.82073 \pm 0.00141
+Halpha corrected flux: 5.35404e-12 \pm 4.47944e-15 erg/s/cm^2
+Halpha luminosity: 2.11398e+42 \pm 1.76865e+39 erg/s
+Halpha SFR: 1.67004e+01 \pm 1.39723e-02 M_sun/yr
+

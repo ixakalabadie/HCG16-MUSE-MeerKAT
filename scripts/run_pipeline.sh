@@ -14,45 +14,45 @@ cat_path="sofia_output/hcg16_linehighres_masked.pbcorr_vopt_cat.txt"
 out_dir="../output"
 s2n=5
 
-python meerkat_pipeline.py -d "$hi_cube" -b "$pb_cube" -o "$out_dir" -p "$sofia_par" -s 5.6 -f 0 -t 0.9 -e "false"
+python3 meerkat_pipeline.py -d "$hi_cube" -b "$pb_cube" -o "$out_dir" -p "$sofia_par" -s 5.6 -f 0 -t 0.9 -e "false"
 
-python hcg16_decals_HI60.py -o "$out_dir"
+python3 hcg16_decals_HI60.py -o "$out_dir"
 
 for num in "${galaxies[@]}"
 do
     echo -e "\nRunning workflow for NGC${num}"
 
-    python muse_pipeline.py -d "${gas_path/XXX/$num}" -e "${elines_path/XXX/$num}" -o "$out_dir/ngc${num}" -s "$s2n"
+    python3 muse_pipeline.py -d "${gas_path/XXX/$num}" -e "${elines_path/XXX/$num}" -o "$out_dir/ngc${num}" -s "$s2n"
 
-    python star_form_hist.py -p "${ssp_path/XXX/$num}" -f "${sfh_path/XXX/$num}" -o "$out_dir/ngc${num}"
+    python3 star_form_hist.py -p "${ssp_path/XXX/$num}" -f "${sfh_path/XXX/$num}" -o "$out_dir/ngc${num}"
 
-    python radial_sfh.py -p "${ssp_path/XXX/$num}" -f "${sfh_path/XXX/$num}" -o "$out_dir/ngc${num}"
+    python3 radial_sfh.py -p "${ssp_path/XXX/$num}" -f "${sfh_path/XXX/$num}" -o "$out_dir/ngc${num}"
 
-    python Halpha_SFR.py -a "${out_dir}/ngc${num}/NGC${num}_flux_Ha.fits" -b "${elines_path/XXX/$num}" -o "$out_dir/ngc${num}"
+    python3 Halpha_SFR.py -a "${out_dir}/ngc${num}/NGC${num}_flux_Ha.fits" -b "${elines_path/XXX/$num}" -o "$out_dir/ngc${num}"
 
-    # python bpt.py -e "${elines_path/XXX/$num}" -r "${out_dir}/ngcXXX/re_mass_sfh_ngcXXX.csv" -m "${out_dir}/ngc${num}/mask_re_ngc${num}.fits" -o "$out_dir/ngc${num}"
+    # python3 bpt.py -e "${elines_path/XXX/$num}" -r "${out_dir}/ngcXXX/re_mass_sfh_ngcXXX.csv" -m "${out_dir}/ngc${num}/mask_re_ngc${num}.fits" -o "$out_dir/ngc${num}"
 
-    python ha_flux_hi_mom1.py -i "$out_dir/ngc${num}/NGC${num}_flux_Ha.fits" -o "$out_dir/ngc${num}"
+    python3 ha_flux_hi_mom1.py -i "$out_dir/ngc${num}/NGC${num}_flux_Ha.fits" -o "$out_dir/ngc${num}"
 
-    python ha_flux_hi_coldens.py -i "$out_dir/ngc${num}/NGC${num}_flux_Ha.fits" -o "$out_dir/ngc${num}"
+    python3 ha_flux_hi_coldens.py -i "$out_dir/ngc${num}/NGC${num}_flux_Ha.fits" -o "$out_dir/ngc${num}"
 
-    python ha_mom1_hi_coldens.py -i "$out_dir/ngc${num}/NGC${num}_vopt_Ha.fits" -o "$out_dir/ngc${num}"
+    python3 ha_mom1_hi_coldens.py -i "$out_dir/ngc${num}/NGC${num}_vopt_Ha.fits" -o "$out_dir/ngc${num}"
 
-    python ha_mom1_hi_mom1.py -i "$out_dir/ngc${num}/NGC${num}_vopt_Ha.fits" -o "$out_dir/ngc${num}"
+    python3 ha_mom1_hi_mom1.py -i "$out_dir/ngc${num}/NGC${num}_vopt_Ha.fits" -o "$out_dir/ngc${num}"
 
     # base=$(basename "$gas_path")
     # base="${base/XXX/$num}"
-    # python fit_components.py -d "$out_dir/ngc${num}/${base/.fits/_Halpha_vopt.fits}" -o "$out_dir/ngc${num}"
+    # python3 fit_components.py -d "$out_dir/ngc${num}/${base/.fits/_Halpha_vopt.fits}" -o "$out_dir/ngc${num}"
 
     base=$(basename "$hi_cube")
-    python visl3d_overlay.py -a "$out_dir/ngc${num}/GAS.NGC${num}.cube_Halpha_vopt.fits" -r "$out_dir/ngc${num}/${base/.fits/_vopt_ngc$num.fits}" -o "$out_dir/ngc${num}"
+    python3 visl3d_overlay.py -a "$out_dir/ngc${num}/GAS.NGC${num}.cube_Halpha_vopt.fits" -r "$out_dir/ngc${num}/${base/.fits/_vopt_ngc$num.fits}" -o "$out_dir/ngc${num}"
 done
 
-python obs_params.py -c ${out_dir}/${cat_path} -m "${gas_path/833/$num}" -o "${out_dir}"
+python3 obs_params.py -c ${out_dir}/${cat_path} -m "${gas_path/833/$num}" -o "${out_dir}"
 
-python lindblad_ngc835.py -p "${ssp_path/XXX/835}" -o "${out_dir}/ngc835"
+python3 lindblad_ngc835.py -p "${ssp_path/XXX/835}" -o "${out_dir}/ngc835"
 
-python compare_sfh.py -r "${out_dir}/ngcYYY/radial_XXX_ngcYYY.csv" -f "${out_dir}/ngcXXX/SFH_ngcXXX.csv" -e "${out_dir}/ngcXXX/re_mass_sfh_ngcXXX.csv" -g "${galaxies[@]}" -o "${out_dir}"
+python3 compare_sfh.py -r "${out_dir}/ngcYYY/radial_XXX_ngcYYY.csv" -f "${out_dir}/ngcXXX/SFH_ngcXXX.csv" -e "${out_dir}/ngcXXX/re_mass_sfh_ngcXXX.csv" -g "${galaxies[@]}" -o "${out_dir}"
 
 # Copy files to the article figures directory.
 # add name after figures/ to set journal requirements

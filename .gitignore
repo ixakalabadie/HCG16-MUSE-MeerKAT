@@ -1,1 +1,13 @@
 __pycache__/
+.bash_history
+.cache/
+.python_history
+
+*.fits
+*.sif
+output/*/*.png
+
+!output/
+!output/*/
+!output/*/*_subcube*.fits
+!output/*/*-mask.fits

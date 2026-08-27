@@ -1,0 +1,22 @@
+Synthesis results for NGC848
+SFR_10 (11.3 Myr): 38.821 M_sun/yr
+SFR_20 (22.5 Myr): 36.778 M_sun/yr
+
+Ellipse fit parameters for NGC848
+(Values in pixels unless specified)
+PA: 137.00 deg
+Eccentricity: 0.654
+HLR Effective radius: 52.26
+Semi-major axis: 88.86
+Semi-minor axis: 30.74
+Center (x,y): 160, 160
+
+H-alpha flux and SFR results for NGC848
+Distance: 59.55559 Mpc
+Halpha flux: 2.92001e-13 \pm 4.95634e-17 erg/s/cm^2
+Hbeta flux: 8.10132e-14 \pm 6.39816e-17 erg/s/cm^2
+Balmer decrement (R = Ha/Hb): 3.60437 \pm 0.00291
+Halpha corrected flux: 5.68148e-13 \pm 1.32453e-15 erg/s/cm^2
+Halpha luminosity: 2.41111e+41 \pm 5.62104e+38 erg/s
+Halpha SFR: 1.90478e+00 \pm 4.44062e-03 M_sun/yr
+

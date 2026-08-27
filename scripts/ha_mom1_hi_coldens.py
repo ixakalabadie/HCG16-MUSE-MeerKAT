@@ -137,10 +137,9 @@ def plot_ha_mom1_hi_coldens(in_path, num, out_dir):
     cbar.ax.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f"{x:g}"))
     cbar.ax.tick_params(labelsize=12)
     cbar.set_label(f"Velocity (km/s)", rotation=270, fontsize=14, labelpad=20)
-    m0 = ax.contour(nhi, levels=nhi_levels, colors='k', norm='log', transform=ax.get_transform(mom0_wcs))
-    styles = ['solid'] * len(m0.levels)
+    styles = ['solid'] * len(nhi_levels)
     styles[0] = 'dashed'
-    m0.set_linestyles(styles)
+    m0 = ax.contour(nhi, levels=nhi_levels, colors='k', norm='log', linestyles=styles, transform=ax.get_transform(mom0_wcs))
 
     plt.xlim(0,vel_data.shape[1])
     plt.ylim(0,vel_data.shape[0])

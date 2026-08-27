@@ -5,6 +5,8 @@ import subprocess
 from shutil import which
 from astropy.io import fits
 import argparse
+import configparser
+import json
 
 def get_args():
     """
@@ -101,7 +103,7 @@ def make_subcubes(in_path, out_path):
         config_object = configparser.ConfigParser()
         with open("hcg16_gals_params.ini","r") as file_object:
             config_object.read_file(file_object)
-            lims = json.loads(config_object.get('ngc'+num, "meer_lims"))
+            lim = json.loads(config_object.get('ngc'+num, "meer_lims"))
         subcube = data[lim[2][0]:lim[2][1], lim[1][0]:lim[1][1], lim[0][0]:lim[0][1]]
         subcube_header = header.copy()
         subcube_header['NAXIS'] = 3
@@ -251,6 +253,8 @@ def main():
     run_sofia(par_file, out_dir + '/sofia_output', cube_vopt, args.scfind_threshold,
         args.reliability_minpix, args.reliability_threshold, args.reliability_enable, pb_squared)
     # run_sofia(par_file, out_path + '/sofia_output', cube_vopt, 5.6, 0, 0.9, 'false', pb_squared)
+
+    make_subcubes(cube_vopt, out_dir)
 
 if __name__ == "__main__":
     main()

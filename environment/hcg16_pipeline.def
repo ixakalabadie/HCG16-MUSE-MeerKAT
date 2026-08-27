@@ -57,7 +57,7 @@ From: ubuntu:20.04
 	nano
 
     # Install python packages
-    pip3 install numpy scipy astropy matplotlib multiprocess lmfit tqdm visl3d
+    pip3 install numpy scipy astropy matplotlib pandas photutils multiprocess lmfit tqdm visl3d anywidget
 
     # Install SoFiA2
     mkdir -p /opt/sofia2

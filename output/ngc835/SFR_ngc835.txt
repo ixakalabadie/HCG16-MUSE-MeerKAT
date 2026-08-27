@@ -1,0 +1,22 @@
+Synthesis results for NGC835
+SFR_10 (11.3 Myr): 63.719 M_sun/yr
+SFR_20 (22.5 Myr): 44.841 M_sun/yr
+
+Ellipse fit parameters for NGC835
+(Values in pixels unless specified)
+PA: 1.24 deg
+Eccentricity: 0.295
+HLR Effective radius: 30.00
+Semi-major axis: 35.72
+Semi-minor axis: 25.19
+Center (x,y): 244, 176
+
+H-alpha flux and SFR results for NGC835
+Distance: 60.74158 Mpc
+Halpha flux: 5.03260e-13 \pm 6.77649e-17 erg/s/cm^2
+Hbeta flux: 1.06785e-13 \pm 7.89822e-17 erg/s/cm^2
+Balmer decrement (R = Ha/Hb): 4.71284 \pm 0.00354
+Halpha corrected flux: 2.09390e-12 \pm 4.52108e-15 erg/s/cm^2
+Halpha luminosity: 9.24357e+41 \pm 1.99584e+39 erg/s
+Halpha SFR: 7.30242e+00 \pm 1.57671e-02 M_sun/yr
+

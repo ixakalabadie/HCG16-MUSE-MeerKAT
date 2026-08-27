@@ -34,13 +34,13 @@ def get_isolevels(num):
 
 # ── 1. Loading ───────────────────────────────────────────────────────────────
 
-def get_mask(path: str) -> np.ndarray:
+def get_mask(path):
     with fits.open(path) as hdul:
         mask = np.squeeze(hdul[0].data).astype(bool)
     return ~mask
 
 
-def get_cube(path: str, mask_path: str | None = None):
+def get_cube(path, mask_path):
     with fits.open(path) as hdul:
         data   = np.squeeze(hdul[0].data).astype(float)
         header = hdul[0].header
@@ -53,7 +53,7 @@ def get_cube(path: str, mask_path: str | None = None):
 
 # ── 2. World-coordinate union bounding box ───────────────────────────────────
 
-def _cube_world_bounds(data: np.ndarray, wcs: WCS):
+def _cube_world_bounds(data, wcs):
     """Min/max world coords over all 8 pixel corners."""
     nz, ny, nx = data.shape
     corners = np.array([[x, y, z]
@@ -72,8 +72,8 @@ def _union_bounds(data1, wcs1, data2, wcs2):
 
 # ── 3. Zero-pad one cube to cover the target world bounding box ───────────────
 
-def _pad_to_bounds(data: np.ndarray, wcs: WCS, header,
-                   world_min: np.ndarray, world_max: np.ndarray):
+def _pad_to_bounds(data, wcs, header,
+                   world_min, world_max):
     nz, ny, nx = data.shape
 
     pix_lo = wcs.all_world2pix([world_min], 0)[0]   # (x, y, z) pixel coords
@@ -105,7 +105,7 @@ def _pad_to_bounds(data: np.ndarray, wcs: WCS, header,
 
 # ── 4. Coordinate arrays, units, ctypes, deltas ──────────────────────────────
 
-def _axis_coords(wcs: WCS, shape_zyx: tuple) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
+def _axis_coords(wcs, shape_zyx):
     """
     1D world-coordinate arrays for each axis.
     Vary one pixel index at a time; appropriate for separable (orthogonal) WCS.
@@ -124,7 +124,7 @@ def _axis_coords(wcs: WCS, shape_zyx: tuple) -> tuple[np.ndarray, np.ndarray, np
     return ra, dec, vel
 
 
-def _axis_info(header) -> dict:
+def _axis_info(header):
     """
     Units, CTYPE strings (magnitude/type), and absolute pixel scales
     for axes in (RA, Dec, Z) order (FITS axes 1, 2, 3).
@@ -155,7 +155,7 @@ def _axis_info(header) -> dict:
 
 # ── 5. Main alignment function ───────────────────────────────────────────────
 
-def _orient_cube(cube: np.ndarray, wcs: WCS, shape_zyx: tuple):
+def _orient_cube(cube, wcs, shape_zyx):
     """
     Transpose (Z,Dec,RA) → (RA,Dec,Z) and flip each axis independently
     so that all world coordinates are strictly increasing.
@@ -184,9 +184,9 @@ def _orient_cube(cube: np.ndarray, wcs: WCS, shape_zyx: tuple):
 
     return cube, ra, dec, vel
 
-def align_cubes(path1: str, path2: str,
-                mask_path1: str | None = None,
-                mask_path2: str | None = None):
+def align_cubes(path1, path2,
+                mask_path1,
+                mask_path2):
     """
     Align two FITS datacubes to a common world bounding box.
 
@@ -297,13 +297,14 @@ def create_visl3d_overlay(path1, path2, out_path, num):
     delta = muse_info['delta'] # doesn't matter if it's muse or meerkat
     name = muse_info['header']['OBJECT'].split(' ')[0]
 
-    images = [('DECaLS grz', misc.get_imcol(optical_data)[:2]), ('blank', (None, None)), ('', None)]
-    sufix = ['_decals', '_blank', '']
+    images = [('DECaLS grz', misc.get_imcol(optical_data)[:2]), ('', None)] # ('blank', (None, None))
+    sufix = ['_decals', ''] # '_blank'
 
     for i, image2d in enumerate(images):
         cube = vis.Cube(l_cubes, coords=coords, l_isolevels=l_isolevels, cmaps=['inferno_r', 'cividis_r'], units=units,
             mags=mags, name=name, delta=delta, resol=1, image2d=image2d)
-        vis.createVis(cube, f'{out_path}/visl3d_ngc{num}{sufix[i]}')
+        desc = misc.cube_info(cube)
+        vis.createVis(cube, f'{out_path}/visl3d_ngc{num}{sufix[i]}', description=desc, pagetitle=name)
     
     print(f"Visualisations of NGC{num} successful.")
 
@@ -347,13 +348,13 @@ def create_visl3d_overlay_components(path1, path2, out_path, num, prefix=''):
     delta = muse_info['delta'] # doesn't matter if it's muse or meerkat
     name = muse_info['header']['OBJECT'].split(' ')[0]
 
-    images = [('DECaLS grz', misc.get_imcol(optical_data)[:2]), ('blank', (None, None)), ('', None)]
-    sufix = ['_decals', '_blank', '']
+    images = [('DECaLS grz', misc.get_imcol(optical_data)[:2]), ('', None)] # ('blank', (None,None))
+    sufix = ['_decals', ''] # '_blank'
 
     for i, image2d in enumerate(images):
         cube = vis.Cube(l_cubes, coords=coords, l_isolevels=l_isolevels, cmaps=['inferno_r', 'Reds', 'cividis_r'], units=units, mags=mags, name=name, delta=delta, resol=1, image2d=image2d)
         desc = misc.cube_info(cube)
-        vis.createVis(cube, f'{out_path}/{prefix}visl3d_ngc{num}{sufix[i]}', description=desc)
+        vis.createVis(cube, f'{out_path}/{prefix}visl3d_ngc{num}{sufix[i]}', description=desc, pagetitle=name)
     
     print(f"Visualisations of NGC{num} with components successful.")
 
