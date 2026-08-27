@@ -5,6 +5,7 @@ __pycache__/
 
 *.fits
 *.sif
+*.html
 output/*/*.png
 
 !output/

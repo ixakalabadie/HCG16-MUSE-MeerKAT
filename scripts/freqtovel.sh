@@ -10,6 +10,19 @@ fits in=$cube_freq op=xyin out=$cube_out
 puthd in=$cube_out/restfreq value=1.420405751768
 velsw in=$cube_out axis=vopt
 fits in=$cube_out op=xyout out=$cube_vel
+
+python3 - <<EOF
+from astropy.io import fits
+
+with fits.open("$cube_vel", mode="update") as hdul:
+    hdr = hdul[0].header
+    hdr["CUNIT1"] = "deg"
+    hdr["CUNIT2"] = "deg"
+    hdr["CRVAL3"] *= 1000.0
+    hdr["CDELT3"] *= 1000.0
+    hdr["CUNIT3"] = "m/s"
+EOF
+
 rm -r $cube_out
 
 

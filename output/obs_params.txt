@@ -1,7 +1,7 @@
 Observational parameters
 Distance: 58.17260 Mpc
 Linear Resolution: 2.32639 kpc
-Noise: 30350.11900 mJy/beam
-Colum density 3sigma sensitivity: 1.577e+25 cm-2
-HI mass: 0.011 1e9 M_sun
+Noise: 0.31061 mJy/beam
+Colum density 3sigma sensitivity: 1.614e+20 cm-2
+HI mass: 10.516 1e9 M_sun
 

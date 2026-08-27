@@ -99,9 +99,9 @@ def get_args():
     args = parser.parse_args()
     return args
 
-def get_noise(cat_path, score_col=12, value_col=23):
+def get_noise(cat_path, score_col=12, value_col=18):
     """
-    Get rms of the subcube with most pixels from SoFiA catalog. The column of the number of pixels is given by score_col (usually 12) and the rms by value_col (usually 23). Returns noise in Jy/beam
+    Get rms of the subcube with most pixels from SoFiA catalog. The column of the number of pixels is given by score_col (12 in SoFiA-2 v2.5.1 and v2.6.0) and the rms by value_col (23 in SoFiA-2 v2.5.1 and 18 in v2.6.0). Returns noise in Jy/beam
     """
     data = np.genfromtxt(cat_path,
             dtype=str,
@@ -175,7 +175,7 @@ def main():
 
     bmaj, bmin, pix1, pix2, v_res = resolution(mom0_header)
 
-    noise = get_noise(cat_path) * 1000
+    noise = get_noise(cat_path, score_col=12, value_col=18) * 1000
 
     himass = hi_mass(mom0_data, dist.value, bmaj, bmin, pix1, pix2)
 
