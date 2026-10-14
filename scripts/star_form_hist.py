@@ -223,6 +223,10 @@ def main():
     nbins = len(ages)
     fractions = sum_fractions(sfh_data, nbins)
     fractions = fractions[sort, :, :]
+    # delete narrow bin 14 and recalculate nbins
+    ages = np.delete(ages, 14)
+    fractions = np.delete(fractions, 14, axis=0)
+    nbins = len(ages)
     # don't save luminosity
     _, _, mass, emass = calc_mass(ssp_data, fractions, nbins, z)
     bins = get_bins(ages)

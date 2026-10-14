@@ -446,6 +446,11 @@ def main():
     nbins = len(ages)
     fractions = sum_fractions(sfh_data, nbins)
     fractions = fractions[sort, :, :]
+    # delete narrow bin 14 and recalculate nbins and dt
+    ages = np.delete(ages, 14)
+    fractions = np.delete(fractions, 14, axis=0)
+    nbins = len(ages)
+    dt = np.gradient(ages).to(u.yr).value
     # Get ellipses for our set radii
     # get masks for rings
     thin=False

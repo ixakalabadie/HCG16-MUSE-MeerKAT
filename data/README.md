@@ -20,3 +20,5 @@ This is the list of files with their original names required to reproduce the an
 - hcg16_linehighres_masked.pb.fits
 - hcg16_linehighres_masked.pbcorr.fits
 - hcg16_full_3000_ps0.524_32.4750_-10.2181.fits (DECaLS image)
+- HCG16_OUT_LOW60/cubes/cube_1/hcg16_HCG16_hcg16_line60_masked.pb_corr.vopt.fits (Ianjamasimanana et al. 2025 image)
+- HCG16_OUT_LOW60/cubes/cube_1/sofia_outputs_mask_pbc_vopt/hcg16_HCG16_hcg16_line60_masked.pb_corr.vopt_mask.fits (Ianjamasimanana et al. 2025 mask)

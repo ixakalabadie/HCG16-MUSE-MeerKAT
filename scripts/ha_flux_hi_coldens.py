@@ -13,6 +13,9 @@ plt.style.use('tableau-colorblind10')
 plt.rcParams['axes.formatter.use_mathtext'] = True
 import matplotlib.ticker as mticker
 from matplotlib.patches import Ellipse
+from matplotlib.font_manager import FontProperties
+
+LAB = {'833': 'B', '835': 'A', '838': 'C', '839': 'D', '848': '848'}
 
 def get_args():
     """
@@ -119,22 +122,26 @@ def plot_ha_flux_hi_coldens(in_path, num, out_dir):
         bunit = r"$10^{-16}\,$erg/s/cm$^2$/Å"
 
     fig, ax = plt.subplots(subplot_kw=dict(projection=ha_wcs), figsize=(8,8))
-    # ax.set_title(f"coldens levels = {nhi_levels}")
+    if num != '848':
+        ax.set_title(f'HCG 16{LAB[str(num)]}', fontsize=16)
+    else:
+        ax.set_title(f'NGC {num}', fontsize=16)
     ha = ax.imshow(ha_data, cmap=cmap, norm='log', vmin=0.001, vmax=np.max(ha_data)*0.5)
     ax.scatter(cent[0], cent[1], color='k', marker='+', s=150, linewidths=2)
     cbar = plt.colorbar(ha, ax=ax, shrink=0.83, pad=0.02)
     cbar.ax.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f"{x:g}"))
     cbar.ax.tick_params(labelsize=12)
     cbar.set_label(f"Flux ({bunit})", rotation=270, fontsize=14, labelpad=20)
-    styles = ['solid'] * len(nhi_levels)
+    m0 = ax.contour(nhi, levels=nhi_levels, cmap='Oranges_r', norm='log', transform=ax.get_transform(mom0_wcs)) # colors='white', cmap='bone'
+    styles = ['solid'] * len(m0.levels)
     styles[0] = 'dashed'
-    m0 = ax.contour(nhi, levels=nhi_levels, cmap='Oranges_r', norm='log', linestyles=styles, transform=ax.get_transform(mom0_wcs)) # colors='white', cmap='bone'
+    m0.set_linestyles(styles)
     plt.xlim(0,ha_data.shape[1])
     plt.ylim(0,ha_data.shape[0])
     add_beam(ax, major=mom0_header['BMAJ'] * u.deg, minor=mom0_header['BMIN'] * u.deg, angle=mom0_header['BPA'], color='w')
     second_beam(ax, ha_wcs, seeing * u.arcsec, seeing * u.arcsec, 0)
     # add_beam(ax, major=seeing * u.arcsec, minor=seeing * u.arcsec, angle=0, color='k')
-    add_scalebar(ax, scalebar_angle(d*u.Mpc, 5*u.kpc), label="5 kpc", color="w", label_top=True, corner="top left")
+    add_scalebar(ax, scalebar_angle(d*u.Mpc, 5*u.kpc), label="5 kpc", color="w", label_top=True, corner="top left", fontproperties=FontProperties(size=14))
 
     ax.set_xlabel('RA', fontsize=16)
     ax.set_ylabel('Dec', fontsize=16)

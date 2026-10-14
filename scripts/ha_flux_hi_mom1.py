@@ -15,6 +15,9 @@ plt.rcParams['axes.formatter.use_mathtext'] = True
 import matplotlib.ticker as mticker
 import argparse
 from matplotlib.patches import Ellipse
+from matplotlib.font_manager import FontProperties
+
+LAB = {'833': 'B', '835': 'A', '838': 'C', '839': 'D', '848': '848'}
 
 def scalebar_angle(d, bar_len = 10 * u.kpc):
     return (bar_len / d).to(u.deg, equivalencies=u.dimensionless_angles())
@@ -117,7 +120,10 @@ def plot_ha_flux_hi_mom1(in_path, num, out_dir):
     cmap.set_bad(cmap(0.0))
 
     fig, ax = plt.subplots(subplot_kw=dict(projection=ha_wcs), figsize=(8,8))
-    # ax.set_title(f"mom1 levels = {levels}")
+    if num != '848':
+        ax.set_title(f'HCG 16{LAB[str(num)]}', fontsize=16)
+    else:
+        ax.set_title(f'NGC {num}', fontsize=16)
     ha = ax.imshow(ha_data, cmap=cmap, norm='log', vmin=0.001, vmax=np.max(ha_data)*0.5)
     ax.scatter(cent[0], cent[1], color='k', marker='+', s=150, linewidths=2)
     cbar = plt.colorbar(ha, ax=ax, shrink=0.83, pad=0.02);
@@ -131,7 +137,7 @@ def plot_ha_flux_hi_mom1(in_path, num, out_dir):
     add_beam(ax, major=mom1_header['BMAJ'] * u.deg, minor=mom1_header['BMIN'] * u.deg, angle=mom1_header['BPA'], color='w')
     second_beam(ax, ha_wcs, seeing * u.arcsec, seeing * u.arcsec, 0)
     # add_beam(ax, major=seeing * u.arcsec, minor=seeing * u.arcsec, angle=0, color='k')
-    add_scalebar(ax, scalebar_angle(d * u.Mpc, 5*u.kpc), label="5 kpc", color="w", label_top=True, corner="top left")
+    add_scalebar(ax, scalebar_angle(d * u.Mpc, 5*u.kpc), label="5 kpc", color="w", label_top=True, corner="top left", fontproperties=FontProperties(size=14))
 
     ax.set_xlabel("RA", fontsize=16)
     ax.set_ylabel("Dec", fontsize=16)

@@ -95,8 +95,12 @@ def read_sfh_data(sfh_path, galaxies):
         data.append(df)
     return data
 
-def plot_radius(ages, radius_data, radius, galaxies, out_dir, ylim=(1e-4, 9e2)):
+def plot_radius(ages, radius_data, radius, galaxies, total_masses, out_dir, ylim=(1e-4, 9e2)):
     markers = ['o', 'x', '<', 'd', '+', '*', 's']
+    sort_idx = np.argsort(total_masses)[::-1]
+    # Colormap from red to blue
+    cmap = plt.cm.coolwarm_r  # or plt.cm.coolwarm
+    colors = cmap(np.linspace(0, 1, len(galaxies)))[sort_idx]
     fig, ax = plt.subplots(figsize=(6, 4))
     ax.set_title(f'SFH at R={radius} arcsec')
     for i, gal in enumerate(galaxies):
@@ -104,9 +108,9 @@ def plot_radius(ages, radius_data, radius, galaxies, out_dir, ylim=(1e-4, 9e2)):
         sfh_err = radius_data[i][f'DSFR_{radius} (M_sun/yr)'].values
         # ax.errorbar(ages, sfh, yerr=sfh_err, label=f'NGC{gal}', fmt='.', ecolor='k', capsize=3)
         if gal == 848 or gal == '848':
-            ax.scatter(ages, sfh, marker=markers[i], label=f'NGC {gal}')
+            ax.scatter(ages, sfh, marker=markers[i], label=f'NGC {gal}', color=colors[i], s=45)
         else:
-            ax.scatter(ages, sfh, marker=markers[i], label=f'HCG 16{LAB[str(gal)]}')
+            ax.scatter(ages, sfh, marker=markers[i], label=f'HCG 16{LAB[str(gal)]}', color=colors[i], s=45)
     ax.set_yscale('log')
     ax.set_ylim(ylim[0], ylim[1])
     ax.set_xscale('log')
@@ -380,7 +384,11 @@ def plot_radius_all(ages, radius_data, radii, galaxies, total_masses, out_dir, n
         plt.savefig(f'{out_dir}/images/comparison_radial_sfh_all{lab}{con}.png', dpi=300, bbox_inches='tight')
         plt.close()
 
-def plot_sfh(ages, sfh_data, galaxies, out_dir, norm=None, conv=False):
+def plot_sfh(ages, sfh_data, galaxies, total_masses, out_dir, norm=None, conv=False):
+    sort_idx = np.argsort(total_masses)[::-1]
+    # Colormap from red to blue
+    cmap = plt.cm.coolwarm_r  # or plt.cm.coolwarm
+    colors = cmap(np.linspace(0, 1, len(galaxies)))[sort_idx]
     fig, ax = plt.subplots(figsize=(14,5))
     for i, gal in enumerate(galaxies):
         sfh = sfh_data[i]['SFR (M_sun/yr)']
@@ -402,9 +410,9 @@ def plot_sfh(ages, sfh_data, galaxies, out_dir, norm=None, conv=False):
         else:
             lab = ''
         if gal == 848 or gal == '848':
-            ax.errorbar(ages, sfh, yerr=sfh_err, label=f'NGC {gal}', fmt='o-', ecolor='k', capsize=3)
+            ax.errorbar(ages, sfh, yerr=sfh_err, label=f'NGC {gal}', fmt='o-', color=colors[i], ecolor='k', capsize=3)
         else:
-            ax.errorbar(ages, sfh, yerr=sfh_err, label=f'HCG 16{LAB[str(gal)]}', fmt='o-', ecolor='k', capsize=3)
+            ax.errorbar(ages, sfh, yerr=sfh_err, label=f'HCG 16{LAB[str(gal)]}', fmt='o-', color=colors[i], ecolor='k', capsize=3)
     ax.tick_params(axis='both', labelsize=14)
     ax.set_xlabel('Lookback time (Gyr)', fontsize=16)
     if norm is not None:
@@ -483,10 +491,10 @@ def main():
     # Integrated SFH plots:
     plot_mass_accumulation(ages, re_data, galaxies, total_masses, out_dir, norm=True)
     plot_mass_accumulation(ages, re_data, galaxies, total_masses, out_dir, norm=False)
-    plot_sfh(ages, sfh_data, galaxies, out_dir)
-    plot_sfh(ages, sfh_data, galaxies, out_dir, norm=masses)
-    plot_sfh(ages, sfh_data, galaxies, out_dir, conv=True)
-    plot_sfh(ages, sfh_data, galaxies, out_dir, norm=masses, conv=True)
+    plot_sfh(ages, sfh_data, galaxies, total_masses, out_dir)
+    plot_sfh(ages, sfh_data, galaxies, total_masses, out_dir, norm=masses)
+    plot_sfh(ages, sfh_data, galaxies, total_masses, out_dir, conv=True)
+    plot_sfh(ages, sfh_data, galaxies, total_masses, out_dir, norm=masses, conv=True)
     plot_mass(ages, sfh_data, galaxies, out_dir)
     plot_mass(ages, sfh_data, galaxies, out_dir, norm=masses)
     plot_convolved2(ages, re_data, galaxies, total_masses, out_dir)
@@ -503,7 +511,7 @@ def main():
     # SFR for each radius scatter plot:
     plot_radius_together(ages, radius_sfh_data, radii, galaxies, out_dir)
     for r in radii:
-        plot_radius(ages, radius_sfh_data, r, galaxies, out_dir)
+        plot_radius(ages, radius_sfh_data, r, galaxies, total_masses, out_dir)
 
     # HLR radii
     radius_sfh_data, ages, radii = read_radius_data(radius_path, galaxies, mass=False, hlr=True)
