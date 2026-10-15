@@ -2,7 +2,7 @@
 <VOTABLE version="1.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.ivoa.net/xml/VOTable/v1.3">
 	<RESOURCE>
 		<DESCRIPTION>Source catalogue created by the Source Finding Application (SoFiA 2.6.0)</DESCRIPTION>
-		<PARAM name="Time" datatype="char" arraysize="*" value="Thu, 27 Aug 2026, 12:58:42" ucd="time.creation"/>
+		<PARAM name="Time" datatype="char" arraysize="*" value="Thu, 15 Oct 2026, 10:50:48" ucd="time.creation"/>
 		<PARAM name="Creator" datatype="char" arraysize="*" value="SoFiA 2.6.0 (29-Oct-2024)" ucd="meta.id;meta.software"/>
 		<PARAM name="pipeline.verbose" datatype="char" arraysize="*" value="false" ucd="meta.note"/>
 		<PARAM name="pipeline.pedantic" datatype="char" arraysize="*" value="true" ucd="meta.note"/>

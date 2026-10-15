@@ -1,6 +1,6 @@
 # Integrated source spectrum
 # Creator: SoFiA 2.6.0 (29-Oct-2024)
-# Time:    Thu, 27 Aug 2026, 12:53:14
+# Time:    Thu, 15 Oct 2026, 10:44:18
 #
 # Description of parameters:
 #

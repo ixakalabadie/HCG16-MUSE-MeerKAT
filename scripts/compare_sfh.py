@@ -73,8 +73,10 @@ def read_radius_data(radius_path, galaxies, mass=True, hlr=False):
             else:
                 gal_path = radius_path.replace('XXX', 'sfh')
         gal_path = gal_path.replace('YYY', str(gal))
+        print(gal_path)
         df = pd.read_csv(gal_path)  
-        ages = df['age (Gyr)'].values     
+        ages = df['age (Gyr)'].values
+        print(ages)
         df = df.drop(columns=['age (Gyr)']) 
         data.append(df)
     if mass:

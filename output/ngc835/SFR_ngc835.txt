@@ -20,3 +20,8 @@ Halpha corrected flux: 2.09390e-12 \pm 4.52108e-15 erg/s/cm^2
 Halpha luminosity: 9.24357e+41 \pm 1.99584e+39 erg/s
 Halpha SFR: 7.30242e+00 \pm 1.57671e-02 M_sun/yr
 
+Parameters of the bubble in NGC835
+Radius: 6.79365e+02 pc \pm 4.18355e+01 pc
+Velocity: 1.42712e+02 km / s \pm 5.70849e+01 km / s
+Age: 4.65466 Myr \pm 1.88380 Myr
+

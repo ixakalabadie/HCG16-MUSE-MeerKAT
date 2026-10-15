@@ -1,6 +1,6 @@
 -- SoFiA source catalogue
 -- Creator: SoFiA 2.6.0 (29-Oct-2024)
--- Time:    Thu, 27 Aug 2026, 12:58:42
+-- Time:    Thu, 15 Oct 2026, 10:50:50
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 

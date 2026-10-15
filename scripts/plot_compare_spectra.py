@@ -40,6 +40,13 @@ def load_cube(path):
         data = hdul[0].data
         data = np.squeeze(data)
         header = hdul[0].header
+        if 'line60' in path and np.abs(header['CDELT3']) < 100:
+            # The units are wrong in this cube
+            header['CDELT3'] = header['CDELT3'] * 1000
+            header['CUNIT3'] = 'm/s'
+            header['CRVAL3'] = header['CRVAL3'] * 1000
+            header['CUNIT1'] = 'deg'
+            header['CUNIT2'] = 'deg'
         wcs = WCS(header)
     return data, header, wcs
 
